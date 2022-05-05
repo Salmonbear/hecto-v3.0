@@ -169,19 +169,6 @@
       "cssFilePath": "plasmic/hecto/plasmic_hecto.module.css",
       "components": [
         {
-          "id": "skdcktnuML",
-          "name": "Home",
-          "type": "managed",
-          "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
-          "renderModuleFilePath": "plasmic/hecto/PlasmicHome.jsx",
-          "importSpec": {
-            "modulePath": "../pages/home.jsx"
-          },
-          "cssFilePath": "plasmic/hecto/PlasmicHome.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
           "id": "16yj8MRmRBT",
           "name": "Button",
           "type": "managed",
@@ -231,6 +218,19 @@
             "modulePath": "../pages/blog.jsx"
           },
           "cssFilePath": "plasmic/hecto/PlasmicBlog.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "skdcktnuML",
+          "name": "Index",
+          "type": "managed",
+          "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
+          "renderModuleFilePath": "plasmic/hecto/PlasmicIndex.jsx",
+          "importSpec": {
+            "modulePath": "../pages/index.jsx"
+          },
+          "cssFilePath": "plasmic/hecto/PlasmicIndex.module.css",
           "scheme": "blackbox",
           "componentType": "page"
         }
