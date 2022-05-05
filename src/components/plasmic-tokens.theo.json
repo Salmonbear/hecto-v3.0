@@ -1,0 +1,29 @@
+{
+  "props": [
+    {
+      "name": "BurntOrange",
+      "type": "color",
+      "value": "#FF4A03",
+      "category": "color",
+      "meta": {
+        "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
+        "id": "TvnAw7a08"
+      }
+    },
+    {
+      "name": "PurpleBlue",
+      "type": "color",
+      "value": "#0506CF",
+      "category": "color",
+      "meta": {
+        "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
+        "id": "m4WAv9TKS"
+      }
+    }
+  ],
+  "global": {
+    "meta": {
+      "source": "plasmic.app"
+    }
+  }
+}

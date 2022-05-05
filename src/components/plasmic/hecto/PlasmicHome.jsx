@@ -989,7 +989,9 @@ function PlasmicHome__RenderFunc(props) {
                   className={classNames(projectcss.all, sty.outer)}
                 >
                   <div
-                    className={classNames(projectcss.all, sty.columns__ffXqL)}
+                    data-plasmic-name={"container"}
+                    data-plasmic-override={overrides.container}
+                    className={classNames(projectcss.all, sty.container)}
                   >
                     <div
                       className={classNames(projectcss.all, sty.column__cNjJ)}
@@ -1115,56 +1117,38 @@ function PlasmicHome__RenderFunc(props) {
 
             <div className={classNames(projectcss.all, sty.freeBox___3YrSo)}>
               <div
-                data-plasmic-name={"footerTop"}
-                data-plasmic-override={overrides.footerTop}
-                className={classNames(projectcss.all, sty.footerTop)}
-              >
-                <div className={classNames(projectcss.all, sty.freeBox__ylnYi)}>
-                  <div
-                    className={classNames(projectcss.all, sty.columns__cDx2W)}
-                  >
-                    <p.Stack
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.column__uC104)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___96Egx
-                        )}
-                      >
-                        {""}
-                      </div>
-                    </p.Stack>
-                  </div>
-                </div>
-              </div>
-
-              <div
                 data-plasmic-name={"footerBottom"}
                 data-plasmic-override={overrides.footerBottom}
                 className={classNames(projectcss.all, sty.footerBottom)}
               >
                 <div className={classNames(projectcss.all, sty.freeBox__id2Cu)}>
+                  <p.PlasmicLink
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      sty.link__jzMtv
+                    )}
+                    component={Link}
+                    platform={"gatsby"}
+                  />
+                </div>
+
+                <div className={classNames(projectcss.all, sty.freeBox__eUaht)}>
                   <div
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text___8PIpa
+                      sty.text__egxLh
                     )}
                   >
                     {"© Hecto . All rights reserved"}
                   </div>
 
                   <p.PlasmicLink
-                    data-plasmic-name={"link"}
-                    data-plasmic-override={overrides.link}
                     className={classNames(
                       projectcss.all,
                       projectcss.a,
-                      sty.link
+                      sty.link__nhI
                     )}
                     component={Link}
                     platform={"gatsby"}
@@ -1173,7 +1157,7 @@ function PlasmicHome__RenderFunc(props) {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__qkt6K
+                        sty.text__wtF
                       )}
                     >
                       {"Privacy"}
@@ -1183,7 +1167,7 @@ function PlasmicHome__RenderFunc(props) {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__fjD3
+                        sty.text__oYrjZ
                       )}
                     >
                       {"Terms and Conditions"}
@@ -1193,7 +1177,7 @@ function PlasmicHome__RenderFunc(props) {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__wfcxD
+                        sty.text___7A1KJ
                       )}
                     >
                       {"Contact Us"}
@@ -1203,15 +1187,11 @@ function PlasmicHome__RenderFunc(props) {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__trB4H
+                        sty.text__c4XBg
                       )}
                     >
                       {"Blog"}
                     </div>
-
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__sfRvi)}
-                    />
                   </p.PlasmicLink>
                 </div>
               </div>
@@ -1241,9 +1221,8 @@ const PlasmicDescendants = {
     "reasonBox5",
     "reasonBox6",
     "outer",
-    "footerTop",
+    "container",
     "footerBottom",
-    "link",
   ],
 
   header: ["header"],
@@ -1269,10 +1248,9 @@ const PlasmicDescendants = {
   reasonBox4: ["reasonBox4"],
   reasonBox5: ["reasonBox5"],
   reasonBox6: ["reasonBox6"],
-  outer: ["outer"],
-  footerTop: ["footerTop"],
-  footerBottom: ["footerBottom", "link"],
-  link: ["link"],
+  outer: ["outer", "container"],
+  container: ["container"],
+  footerBottom: ["footerBottom"],
 }
 
 function makeNodeComponent(nodeName) {
@@ -1319,9 +1297,8 @@ export const PlasmicHome = Object.assign(
     reasonBox5: makeNodeComponent("reasonBox5"),
     reasonBox6: makeNodeComponent("reasonBox6"),
     outer: makeNodeComponent("outer"),
-    footerTop: makeNodeComponent("footerTop"),
+    container: makeNodeComponent("container"),
     footerBottom: makeNodeComponent("footerBottom"),
-    link: makeNodeComponent("link"),
     // Metadata about props expected for PlasmicHome
     internalVariantProps: PlasmicHome__VariantProps,
     internalArgProps: PlasmicHome__ArgProps,
