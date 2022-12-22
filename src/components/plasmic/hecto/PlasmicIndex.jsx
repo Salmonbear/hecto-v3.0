@@ -11,6 +11,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import * as p from "@plasmicapp/react-web"
+import * as ph from "@plasmicapp/host"
 import {
   classNames,
   createPlasmicElementProxy,
@@ -38,9 +39,37 @@ export const PlasmicIndex__VariantProps = new Array()
 
 export const PlasmicIndex__ArgProps = new Array()
 
+export function Head() {
+  return (
+    <>
+      <meta name="twitter:card" content="summary" />
+      <title key="title">{PlasmicIndex.pageMetadata.title}</title>
+      <meta
+        key="og:title"
+        property="og:title"
+        content={PlasmicIndex.pageMetadata.title}
+      />
+
+      <meta
+        key="twitter:title"
+        name="twitter:title"
+        content={PlasmicIndex.pageMetadata.title}
+      />
+    </>
+  )
+}
+
 function PlasmicIndex__RenderFunc(props) {
-  const { variants, args, overrides, forNode } = props
-  const $props = props.args
+  const { variants, overrides, forNode } = props
+  const $ctx = ph.useDataEnv?.() || {}
+  const args = React.useMemo(() => Object.assign({}, props.args), [props.args])
+  const $props = {
+    ...args,
+    ...variants,
+  }
+
+  const currentUser = p.useCurrentUser?.() || {}
+  const [$queries, setDollarQueries] = React.useState({})
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantskILw5UiAaS1UF(),
   })
@@ -107,7 +136,6 @@ function PlasmicIndex__RenderFunc(props) {
                           )}
                         >
                           <React.Fragment>
-                            <React.Fragment>{""}</React.Fragment>
                             <span
                               className={
                                 "plasmic_default__all plasmic_default__span"
@@ -134,7 +162,6 @@ function PlasmicIndex__RenderFunc(props) {
                             >
                               {"newsletters."}
                             </span>
-                            <React.Fragment>{""}</React.Fragment>
                           </React.Fragment>
                         </h1>
 
@@ -146,7 +173,6 @@ function PlasmicIndex__RenderFunc(props) {
                           )}
                         >
                           <React.Fragment>
-                            <React.Fragment>{""}</React.Fragment>
                             <span
                               className={
                                 "plasmic_default__all plasmic_default__span"
@@ -157,7 +183,6 @@ function PlasmicIndex__RenderFunc(props) {
                                 "Hecto is a platform to buy, sell and manage newsletter ads and sponsorships."
                               }
                             </span>
-                            <React.Fragment>{""}</React.Fragment>
                           </React.Fragment>
                         </div>
                       </p.Stack>
@@ -366,7 +391,6 @@ function PlasmicIndex__RenderFunc(props) {
                                 )}
                               >
                                 <React.Fragment>
-                                  <React.Fragment>{""}</React.Fragment>
                                   <span
                                     className={
                                       "plasmic_default__all plasmic_default__span"
@@ -411,7 +435,6 @@ function PlasmicIndex__RenderFunc(props) {
                                   >
                                     {" "}
                                   </span>
-                                  <React.Fragment>{""}</React.Fragment>
                                 </React.Fragment>
                               </h1>
                             </p.Stack>
@@ -553,7 +576,6 @@ function PlasmicIndex__RenderFunc(props) {
                                 )}
                               >
                                 <React.Fragment>
-                                  <React.Fragment>{""}</React.Fragment>
                                   <span
                                     className={
                                       "plasmic_default__all plasmic_default__span"
@@ -571,7 +593,6 @@ function PlasmicIndex__RenderFunc(props) {
                                   >
                                     {"across multiple newsletters"}
                                   </span>
-                                  <React.Fragment>{""}</React.Fragment>
                                 </React.Fragment>
                               </h1>
                             </p.Stack>
@@ -601,7 +622,6 @@ function PlasmicIndex__RenderFunc(props) {
                       )}
                     >
                       <React.Fragment>
-                        <React.Fragment>{""}</React.Fragment>
                         <span
                           className={
                             "plasmic_default__all plasmic_default__span"
@@ -619,7 +639,6 @@ function PlasmicIndex__RenderFunc(props) {
                         >
                           {"?"}
                         </span>
-                        <React.Fragment>{""}</React.Fragment>
                       </React.Fragment>
                     </h1>
                   </p.Stack>
@@ -1059,14 +1078,12 @@ function PlasmicIndex__RenderFunc(props) {
                     )}
                   >
                     <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
                       <span
                         className={"plasmic_default__all plasmic_default__span"}
                         style={{ color: "#000000" }}
                       >
                         {"Ready to start your campaign?"}
                       </span>
-                      <React.Fragment>{""}</React.Fragment>
                     </React.Fragment>
                   </h2>
 
@@ -1078,14 +1095,12 @@ function PlasmicIndex__RenderFunc(props) {
                     )}
                   >
                     <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
                       <span
                         className={"plasmic_default__all plasmic_default__span"}
                         style={{ color: "#000000" }}
                       >
                         {"Find the perfect newsletter for your brand"}
                       </span>
-                      <React.Fragment>{""}</React.Fragment>
                     </React.Fragment>
                   </div>
 
@@ -1255,12 +1270,17 @@ const PlasmicDescendants = {
 
 function makeNodeComponent(nodeName) {
   const func = function (props) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicIndex__ArgProps,
-      internalVariantPropNames: PlasmicIndex__VariantProps,
-    })
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicIndex__ArgProps,
+          internalVariantPropNames: PlasmicIndex__VariantProps,
+        }),
+
+      [props, nodeName]
+    )
 
     return PlasmicIndex__RenderFunc({
       variants,
@@ -1302,6 +1322,13 @@ export const PlasmicIndex = Object.assign(
     // Metadata about props expected for PlasmicIndex
     internalVariantProps: PlasmicIndex__VariantProps,
     internalArgProps: PlasmicIndex__ArgProps,
+    // Page metadata
+    pageMetadata: {
+      title: "Hecto | Newsletter advertising, simplified",
+      description: "",
+      ogImageSrc: "",
+      canonical: "",
+    },
   }
 )
 

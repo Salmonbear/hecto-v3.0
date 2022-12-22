@@ -11,6 +11,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import * as p from "@plasmicapp/react-web"
+import * as ph from "@plasmicapp/host"
 import {
   classNames,
   createPlasmicElementProxy,
@@ -29,8 +30,16 @@ export const PlasmicHeader__VariantProps = new Array()
 export const PlasmicHeader__ArgProps = new Array()
 
 function PlasmicHeader__RenderFunc(props) {
-  const { variants, args, overrides, forNode } = props
-  const $props = props.args
+  const { variants, overrides, forNode } = props
+  const $ctx = ph.useDataEnv?.() || {}
+  const args = React.useMemo(() => Object.assign({}, props.args), [props.args])
+  const $props = {
+    ...args,
+    ...variants,
+  }
+
+  const currentUser = p.useCurrentUser?.() || {}
+  const [$queries, setDollarQueries] = React.useState({})
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantskILw5UiAaS1UF(),
   })
@@ -75,7 +84,6 @@ function PlasmicHeader__RenderFunc(props) {
               )}
             >
               <React.Fragment>
-                <React.Fragment>{""}</React.Fragment>
                 <span
                   className={"plasmic_default__all plasmic_default__span"}
                   style={{ color: "#0506CF" }}
@@ -89,7 +97,6 @@ function PlasmicHeader__RenderFunc(props) {
                 >
                   {"."}
                 </span>
-                <React.Fragment>{""}</React.Fragment>
               </React.Fragment>
             </div>
           </p.PlasmicLink>
@@ -305,12 +312,17 @@ const PlasmicDescendants = {
 
 function makeNodeComponent(nodeName) {
   const func = function (props) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicHeader__ArgProps,
-      internalVariantPropNames: PlasmicHeader__VariantProps,
-    })
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicHeader__ArgProps,
+          internalVariantPropNames: PlasmicHeader__VariantProps,
+        }),
+
+      [props, nodeName]
+    )
 
     return PlasmicHeader__RenderFunc({
       variants,

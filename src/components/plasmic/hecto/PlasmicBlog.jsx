@@ -11,6 +11,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import * as p from "@plasmicapp/react-web"
+import * as ph from "@plasmicapp/host"
 import {
   classNames,
   createPlasmicElementProxy,
@@ -29,9 +30,37 @@ export const PlasmicBlog__VariantProps = new Array()
 
 export const PlasmicBlog__ArgProps = new Array()
 
+export function Head() {
+  return (
+    <>
+      <meta name="twitter:card" content="summary" />
+      <title key="title">{PlasmicBlog.pageMetadata.title}</title>
+      <meta
+        key="og:title"
+        property="og:title"
+        content={PlasmicBlog.pageMetadata.title}
+      />
+
+      <meta
+        key="twitter:title"
+        name="twitter:title"
+        content={PlasmicBlog.pageMetadata.title}
+      />
+    </>
+  )
+}
+
 function PlasmicBlog__RenderFunc(props) {
-  const { variants, args, overrides, forNode } = props
-  const $props = props.args
+  const { variants, overrides, forNode } = props
+  const $ctx = ph.useDataEnv?.() || {}
+  const args = React.useMemo(() => Object.assign({}, props.args), [props.args])
+  const $props = {
+    ...args,
+    ...variants,
+  }
+
+  const currentUser = p.useCurrentUser?.() || {}
+  const [$queries, setDollarQueries] = React.useState({})
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantskILw5UiAaS1UF(),
   })
@@ -70,7 +99,11 @@ function PlasmicBlog__RenderFunc(props) {
                   className={classNames("__wab_instance", sty.header)}
                 />
 
-                <div className={classNames(projectcss.all, sty.freeBox__rMLnh)}>
+                <div
+                  data-plasmic-name={"heroHorizontal"}
+                  data-plasmic-override={overrides.heroHorizontal}
+                  className={classNames(projectcss.all, sty.heroHorizontal)}
+                >
                   <p.Stack
                     as={"div"}
                     hasGap={true}
@@ -99,36 +132,43 @@ function PlasmicBlog__RenderFunc(props) {
                         >
                           <React.Fragment>
                             <React.Fragment>{""}</React.Fragment>
-                            <h1
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.h1,
-                                projectcss.__wab_text,
-                                sty.h1__haaBt
-                              )}
-                            >
-                              <React.Fragment>
-                                <React.Fragment>{""}</React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{ color: "#0506CF" }}
-                                >
-                                  {"The Hecto Blog"}
-                                </span>
-                                <React.Fragment>{""}</React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{ color: "#FF4A03" }}
-                                >
-                                  {"."}
-                                </span>
-                                <React.Fragment>{""}</React.Fragment>
-                              </React.Fragment>
-                            </h1>
+                            {
+                              <h1
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.h1,
+                                  projectcss.__wab_text,
+                                  sty.h1__haaBt
+                                )}
+                              >
+                                <React.Fragment>
+                                  <span
+                                    className={
+                                      "plasmic_default__all plasmic_default__span"
+                                    }
+                                    style={{
+                                      color: "#0506CF",
+                                      fontWeight: 700,
+                                    }}
+                                  >
+                                    {"The Hecto Blog"}
+                                  </span>
+                                  <React.Fragment>{""}</React.Fragment>
+                                  <span
+                                    className={
+                                      "plasmic_default__all plasmic_default__span"
+                                    }
+                                    style={{
+                                      color: "#FF4A03",
+                                      fontWeight: 700,
+                                    }}
+                                  >
+                                    {"."}
+                                  </span>
+                                </React.Fragment>
+                              </h1>
+                            }
+
                             <React.Fragment>{""}</React.Fragment>
                           </React.Fragment>
                         </h1>
@@ -141,6 +181,41 @@ function PlasmicBlog__RenderFunc(props) {
                           )}
                         >
                           <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "#0D08FF" }}
+                            >
+                              {"Hi, I'm "}
+                            </span>
+                            <React.Fragment>{""}</React.Fragment>
+                            {
+                              <p.PlasmicLink
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.a,
+                                  projectcss.__wab_text,
+                                  projectcss.plasmic_default__inline,
+                                  sty.link__xe4M
+                                )}
+                                component={Link}
+                                href={"https://twitter.com/thedudlian"}
+                                platform={"gatsby"}
+                              >
+                                <React.Fragment>
+                                  <span
+                                    className={
+                                      "plasmic_default__all plasmic_default__span"
+                                    }
+                                    style={{ color: "#FF7C08" }}
+                                  >
+                                    {"Simon"}
+                                  </span>
+                                </React.Fragment>
+                              </p.PlasmicLink>
+                            }
+
                             <React.Fragment>{""}</React.Fragment>
                             <span
                               className={
@@ -149,7 +224,7 @@ function PlasmicBlog__RenderFunc(props) {
                               style={{ color: "#0D08FF" }}
                             >
                               {
-                                "Hi, I'm Simon and I'm building Hecto, the sponsorship platform to support the newsletter creator economy. "
+                                " and I'm building Hecto, the sponsorship platform to support the newsletter creator economy. "
                               }
                             </span>
                             <React.Fragment>{"\n"}</React.Fragment>
@@ -170,7 +245,6 @@ function PlasmicBlog__RenderFunc(props) {
                             >
                               {"Read all about the journey here."}
                             </span>
-                            <React.Fragment>{""}</React.Fragment>
                           </React.Fragment>
                         </div>
                       </p.Stack>
@@ -186,76 +260,16 @@ function PlasmicBlog__RenderFunc(props) {
                 data-plasmic-override={overrides.features}
                 className={classNames(projectcss.all, sty.features)}
               >
-                <div className={classNames(projectcss.all, sty.column__anC0I)}>
+                <div
+                  data-plasmic-name={"blogColumn"}
+                  data-plasmic-override={overrides.blogColumn}
+                  className={classNames(projectcss.all, sty.blogColumn)}
+                >
                   <div
                     data-plasmic-name={"container4"}
                     data-plasmic-override={overrides.container4}
                     className={classNames(projectcss.all, sty.container4)}
-                  >
-                    <div
-                      data-plasmic-name={"outerRow2"}
-                      data-plasmic-override={overrides.outerRow2}
-                      className={classNames(projectcss.all, sty.outerRow2)}
-                    >
-                      <div
-                        data-plasmic-name={"row2"}
-                        data-plasmic-override={overrides.row2}
-                        className={classNames(projectcss.all, sty.row2)}
-                      />
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.columns__qlUwl
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.column__aphqb
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox___5Eekf
-                            )}
-                          >
-                            <p.PlasmicImg
-                              data-plasmic-name={"img"}
-                              data-plasmic-override={overrides.img}
-                              alt={""}
-                              className={classNames(sty.img)}
-                              displayHeight={"auto"}
-                              displayMaxHeight={"none"}
-                              displayMaxWidth={"100%"}
-                              displayMinHeight={"0"}
-                              displayMinWidth={"0"}
-                              displayWidth={"auto"}
-                              loading={"lazy"}
-                            />
-
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__stB5X
-                              )}
-                            >
-                              {"Blog Title"}
-                            </div>
-                          </div>
-                        </div>
-
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.column__yVVuc
-                          )}
-                        />
-                      </div>
-                    </div>
-                  </div>
+                  />
                 </div>
               </section>
             ) : null}
@@ -337,14 +351,12 @@ function PlasmicBlog__RenderFunc(props) {
                     )}
                   >
                     <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
                       <span
                         className={"plasmic_default__all plasmic_default__span"}
                         style={{ color: "#000000" }}
                       >
                         {"Ready to start your campaign?"}
                       </span>
-                      <React.Fragment>{""}</React.Fragment>
                     </React.Fragment>
                   </h2>
 
@@ -356,14 +368,12 @@ function PlasmicBlog__RenderFunc(props) {
                     )}
                   >
                     <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
                       <span
                         className={"plasmic_default__all plasmic_default__span"}
                         style={{ color: "#000000" }}
                       >
                         {"Find the perfect newsletter for your brand"}
                       </span>
-                      <React.Fragment>{""}</React.Fragment>
                     </React.Fragment>
                   </div>
 
@@ -441,12 +451,10 @@ function PlasmicBlog__RenderFunc(props) {
                   </div>
 
                   <p.PlasmicLink
-                    data-plasmic-name={"link"}
-                    data-plasmic-override={overrides.link}
                     className={classNames(
                       projectcss.all,
                       projectcss.a,
-                      sty.link
+                      sty.link__lYcHz
                     )}
                     component={Link}
                     platform={"gatsby"}
@@ -509,39 +517,40 @@ const PlasmicDescendants = {
   root: [
     "root",
     "header",
+    "heroHorizontal",
     "features",
+    "blogColumn",
     "container4",
-    "outerRow2",
-    "row2",
-    "img",
     "outer",
     "svg",
     "footerTop",
     "footerBottom",
-    "link",
   ],
 
   header: ["header"],
-  features: ["features", "container4", "outerRow2", "row2", "img"],
-  container4: ["container4", "outerRow2", "row2", "img"],
-  outerRow2: ["outerRow2", "row2", "img"],
-  row2: ["row2"],
-  img: ["img"],
+  heroHorizontal: ["heroHorizontal"],
+  features: ["features", "blogColumn", "container4"],
+  blogColumn: ["blogColumn", "container4"],
+  container4: ["container4"],
   outer: ["outer"],
   svg: ["svg"],
   footerTop: ["footerTop"],
-  footerBottom: ["footerBottom", "link"],
-  link: ["link"],
+  footerBottom: ["footerBottom"],
 }
 
 function makeNodeComponent(nodeName) {
   const func = function (props) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicBlog__ArgProps,
-      internalVariantPropNames: PlasmicBlog__VariantProps,
-    })
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicBlog__ArgProps,
+          internalVariantPropNames: PlasmicBlog__VariantProps,
+        }),
+
+      [props, nodeName]
+    )
 
     return PlasmicBlog__RenderFunc({
       variants,
@@ -564,19 +573,24 @@ export const PlasmicBlog = Object.assign(
   {
     // Helper components rendering sub-elements
     header: makeNodeComponent("header"),
+    heroHorizontal: makeNodeComponent("heroHorizontal"),
     features: makeNodeComponent("features"),
+    blogColumn: makeNodeComponent("blogColumn"),
     container4: makeNodeComponent("container4"),
-    outerRow2: makeNodeComponent("outerRow2"),
-    row2: makeNodeComponent("row2"),
-    img: makeNodeComponent("img"),
     outer: makeNodeComponent("outer"),
     svg: makeNodeComponent("svg"),
     footerTop: makeNodeComponent("footerTop"),
     footerBottom: makeNodeComponent("footerBottom"),
-    link: makeNodeComponent("link"),
     // Metadata about props expected for PlasmicBlog
     internalVariantProps: PlasmicBlog__VariantProps,
     internalArgProps: PlasmicBlog__ArgProps,
+    // Page metadata
+    pageMetadata: {
+      title: "Hecto | Newsletter advertising, simplified",
+      description: "",
+      ogImageSrc: "",
+      canonical: "",
+    },
   }
 )
 

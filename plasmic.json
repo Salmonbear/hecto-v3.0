@@ -36,17 +36,17 @@
         {
           "id": "kv6Mk_JNYw",
           "name": "Button",
-          "componentImportPath": "antd"
+          "componentImportPath": "antd/lib/button"
         },
         {
           "id": "iBC45mjTXv",
           "name": "Slider",
-          "componentImportPath": "@plasmicpkgs/antd"
+          "componentImportPath": "@plasmicpkgs/antd/skinny/registerSlider"
         },
         {
           "id": "tRueht1jub",
           "name": "Switch",
-          "componentImportPath": "antd"
+          "componentImportPath": "antd/lib/switch"
         },
         {
           "id": "YRr0RPAdEj",
@@ -61,7 +61,7 @@
         {
           "id": "2YpGIhkzkpc",
           "name": "Select",
-          "componentImportPath": "antd"
+          "componentImportPath": "antd/lib/select"
         },
         {
           "id": "yegZ392NLoV",
@@ -71,7 +71,7 @@
         {
           "id": "F10gpQ1ZhXY",
           "name": "Collapse",
-          "componentImportPath": "antd/lib/collapse/Collapse"
+          "componentImportPath": "@plasmicpkgs/antd/skinny/registerCollapse"
         },
         {
           "id": "SAEWraOT2YV",
@@ -111,12 +111,12 @@
         {
           "id": "_C8wcdH3BDp",
           "name": "Carousel",
-          "componentImportPath": "antd"
+          "componentImportPath": "antd/lib/carousel"
         },
         {
           "id": "tO9wrxr8Nbb",
           "name": "Input",
-          "componentImportPath": "antd"
+          "componentImportPath": "antd/lib/input"
         },
         {
           "id": "ZJIPHLoTjkN",
@@ -141,7 +141,7 @@
         {
           "id": "cv59X4q0WK",
           "name": "Dropdown",
-          "componentImportPath": "@plasmicpkgs/antd"
+          "componentImportPath": "@plasmicpkgs/antd/skinny/registerDropdown"
         },
         {
           "id": "cHUYQj2aKK",
@@ -156,10 +156,29 @@
         {
           "id": "Hb-DVgvuk3",
           "name": "Tabs",
-          "componentImportPath": "@plasmicpkgs/antd"
+          "componentImportPath": "@plasmicpkgs/antd/skinny/registerTabs"
+        },
+        {
+          "id": "Q0BhxRa-Moi",
+          "name": "Rate",
+          "componentImportPath": "antd/lib/rate"
+        },
+        {
+          "id": "LF24IrAPbeRN",
+          "name": "TableWrapper",
+          "componentImportPath": "@plasmicpkgs/antd/skinny/registerTable"
+        },
+        {
+          "id": "qJFaUEuzy9Ae",
+          "name": "TableColumn",
+          "componentImportPath": "@plasmicpkgs/antd/skinny/registerTable"
+        },
+        {
+          "id": "aOob39p1-Dlv",
+          "name": "TableValue",
+          "componentImportPath": "@plasmicpkgs/antd/skinny/registerTable"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
@@ -381,7 +400,18 @@
       ],
       "indirect": false,
       "globalContextsFilePath": "",
-      "codeComponents": []
+      "codeComponents": [
+        {
+          "id": "Lo3ARtUvly",
+          "name": "PlasmicHead",
+          "componentImportPath": "@plasmicapp/react-web"
+        },
+        {
+          "id": "0IV3YTLJhO",
+          "name": "Fetcher",
+          "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        }
+      ]
     }
   ],
   "globalVariants": {
@@ -398,6 +428,6 @@
   "gatsbyConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.178",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.178/dist/plasmic.schema.json"
+  "cliVersion": "0.1.190",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.190/dist/plasmic.schema.json"
 }

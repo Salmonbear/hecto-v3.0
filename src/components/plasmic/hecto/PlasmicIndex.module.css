@@ -400,6 +400,37 @@
   > img {
   margin-left: 20px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox___8Pphq {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    align-self: center;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox___8Pphq > :global(.__wab_flex-container) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: stretch;
+    justify-content: flex-start;
+    margin-top: calc(0px - 0px);
+    height: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox___8Pphq > :global(.__wab_flex-container) > *,
+  .freeBox___8Pphq > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .freeBox___8Pphq > :global(.__wab_flex-container) > picture > img,
+  .freeBox___8Pphq
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-top: 0px;
+  }
+}
 .h2__mbr1C {
   position: relative;
   width: auto;
@@ -428,6 +459,7 @@
   .h2__mbr1C {
     font-size: 32px;
     margin-left: calc(0px + 20px) !important;
+    margin-top: calc(0px + 0px) !important;
   }
 }
 .img__w0PtE {
@@ -438,7 +470,7 @@
 .img__w0PtE > picture > img {
   object-fit: contain;
 }
-.img__w0PtE > .__wab_img-spacer > img {
+.img__w0PtE > :global(.__wab_img-spacer) > img {
   object-fit: contain;
 }
 .img___3HW7O {
@@ -449,7 +481,7 @@
 .img___3HW7O > picture > img {
   object-fit: contain;
 }
-.img___3HW7O > .__wab_img-spacer > img {
+.img___3HW7O > :global(.__wab_img-spacer) > img {
   object-fit: contain;
 }
 .img__tsebv {
@@ -460,7 +492,7 @@
 .img__tsebv > picture > img {
   object-fit: contain;
 }
-.img__tsebv > .__wab_img-spacer > img {
+.img__tsebv > :global(.__wab_img-spacer) > img {
   object-fit: contain;
 }
 .img__syyff {
@@ -471,7 +503,7 @@
 .img__syyff > picture > img {
   object-fit: contain;
 }
-.img__syyff > .__wab_img-spacer > img {
+.img__syyff > :global(.__wab_img-spacer) > img {
   object-fit: contain;
 }
 .img__dpwD6 {
@@ -482,7 +514,7 @@
 .img__dpwD6 > picture > img {
   object-fit: contain;
 }
-.img__dpwD6 > .__wab_img-spacer > img {
+.img__dpwD6 > :global(.__wab_img-spacer) > img {
   object-fit: contain;
 }
 .container4 {
@@ -653,7 +685,7 @@
 .img__vUfqP > picture > img {
   object-fit: cover;
 }
-.img__vUfqP > .__wab_img-spacer > img {
+.img__vUfqP > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .container5 {
@@ -749,9 +781,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: auto;
+  width: 619px;
   height: auto;
   max-width: 100%;
+  overflow: auto;
   padding: 8px;
 }
 .img___1LxKm {
@@ -766,7 +799,7 @@
 .img___1LxKm > picture > img {
   object-fit: cover;
 }
-.img___1LxKm > .__wab_img-spacer > img {
+.img___1LxKm > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .img__mjg0Y {
@@ -781,7 +814,7 @@
 .img__mjg0Y > picture > img {
   object-fit: cover;
 }
-.img__mjg0Y > .__wab_img-spacer > img {
+.img__mjg0Y > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .img__ucynL {
@@ -796,7 +829,7 @@
 .img__ucynL > picture > img {
   object-fit: cover;
 }
-.img__ucynL > .__wab_img-spacer > img {
+.img__ucynL > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .column__vxj6M {
@@ -1031,7 +1064,7 @@
 .img__caV4 > picture > img {
   object-fit: contain;
 }
-.img__caV4 > .__wab_img-spacer > img {
+.img__caV4 > :global(.__wab_img-spacer) > img {
   object-fit: contain;
 }
 .columns__j9ONv {
@@ -1150,7 +1183,7 @@
 .img__u55E7 > picture > img {
   object-fit: contain;
 }
-.img__u55E7 > .__wab_img-spacer > img {
+.img__u55E7 > :global(.__wab_img-spacer) > img {
   object-fit: contain;
 }
 .columns___9J1Pw {
@@ -1270,7 +1303,7 @@
 .img__klXBq > picture > img {
   object-fit: contain;
 }
-.img__klXBq > .__wab_img-spacer > img {
+.img__klXBq > :global(.__wab_img-spacer) > img {
   object-fit: contain;
 }
 .columns___38Dr1 {
@@ -1412,7 +1445,7 @@
   align-items: center;
   background: none;
   min-width: 0;
-  padding: 0px 0.83rem;
+  padding: 23px 0.83rem 0px;
 }
 .img__mT2As {
   position: relative;
@@ -1426,7 +1459,7 @@
 .img__mT2As > picture > img {
   object-fit: contain;
 }
-.img__mT2As > .__wab_img-spacer > img {
+.img__mT2As > :global(.__wab_img-spacer) > img {
   object-fit: contain;
 }
 .columns__wtUlN {
@@ -1548,7 +1581,7 @@
   object-fit: contain;
   object-position: 100% 100%;
 }
-.img__iEiWy > .__wab_img-spacer > img {
+.img__iEiWy > :global(.__wab_img-spacer) > img {
   object-fit: contain;
   object-position: 100% 100%;
 }
@@ -1669,7 +1702,7 @@
 .img___9Tur1 > picture > img {
   object-fit: contain;
 }
-.img___9Tur1 > .__wab_img-spacer > img {
+.img___9Tur1 > :global(.__wab_img-spacer) > img {
   object-fit: contain;
 }
 .columns__w0Unk {
