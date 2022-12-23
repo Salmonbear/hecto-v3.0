@@ -142,7 +142,7 @@ function PlasmicIndex__RenderFunc(props) {
                               }
                               style={{ color: "#0506CF" }}
                             >
-                              {"Reach you target market,"}
+                              {"Reach your target market,"}
                             </span>
                             <React.Fragment>{"\n"}</React.Fragment>
                             <span

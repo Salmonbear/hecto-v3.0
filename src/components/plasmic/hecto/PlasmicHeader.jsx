@@ -157,15 +157,19 @@ function PlasmicHeader__RenderFunc(props) {
               />
             ) : null}
 
-            <div
+            <p.PlasmicLink
               className={classNames(
                 projectcss.all,
+                projectcss.a,
                 projectcss.__wab_text,
-                sty.text__fgYc
+                sty.link__fgYc
               )}
+              component={Link}
+              href={`/blog`}
+              platform={"gatsby"}
             >
               {"Blog"}
-            </div>
+            </p.PlasmicLink>
 
             {false ? (
               <Icon3Icon

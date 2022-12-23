@@ -469,7 +469,8 @@
           "name": "CmsQueryRepeater",
           "componentImportPath": "@plasmicpkgs/plasmic-cms"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {
@@ -479,6 +480,12 @@
         "name": "Screen",
         "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
         "contextFilePath": "plasmic/hecto/PlasmicGlobalVariant__Screen.jsx"
+      },
+      {
+        "id": "ler0n_6lU4",
+        "name": "UnnamedGlobalGroupOfVariants",
+        "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
+        "contextFilePath": "plasmic/hecto/PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants.jsx"
       }
     ]
   },
