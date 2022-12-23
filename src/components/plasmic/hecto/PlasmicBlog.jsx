@@ -19,6 +19,7 @@ import {
   ensureGlobalVariants,
 } from "@plasmicapp/react-web"
 import Header from "../../Header" // plasmic-import: qDyfn4Gje2P/component
+import { CmsQueryRepeater } from "@plasmicpkgs/plasmic-cms" // plasmic-import: 8N9-WfZSaq/codeComponent
 import Button from "../../Button" // plasmic-import: 16yj8MRmRBT/component
 import { useScreenVariants as useScreenVariantskILw5UiAaS1UF } from "./PlasmicGlobalVariant__Screen" // plasmic-import: kILw5uiAaS1uF/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css"
@@ -265,11 +266,80 @@ function PlasmicBlog__RenderFunc(props) {
                   data-plasmic-override={overrides.blogColumn}
                   className={classNames(projectcss.all, sty.blogColumn)}
                 >
-                  <div
-                    data-plasmic-name={"container4"}
-                    data-plasmic-override={overrides.container4}
-                    className={classNames(projectcss.all, sty.container4)}
-                  />
+                  <CmsQueryRepeater
+                    data-plasmic-name={"cmsDataLoader"}
+                    data-plasmic-override={overrides.cmsDataLoader}
+                    className={classNames("__wab_instance", sty.cmsDataLoader)}
+                    desc={false}
+                    emptyMessage={
+                      <ph.DataCtxReader>
+                        {$ctx => (
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___3YyKn
+                            )}
+                          >
+                            {"No matching published entries found."}
+                          </div>
+                        )}
+                      </ph.DataCtxReader>
+                    }
+                    filterField={"h1Heading"}
+                    forceEmptyState={false}
+                    forceLoadingState={false}
+                    limit={0}
+                    loadingMessage={
+                      <ph.DataCtxReader>
+                        {$ctx => (
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__fEne
+                            )}
+                          >
+                            {"Loading..."}
+                          </div>
+                        )}
+                      </ph.DataCtxReader>
+                    }
+                    noAutoRepeat={false}
+                    noLayout={false}
+                    useDraft={false}
+                  >
+                    <ph.DataCtxReader>
+                      {$ctx => (
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__tUoe1
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__iDw87
+                            )}
+                          >
+                            {(() => {
+                              try {
+                                return $ctx.plasmicCmsBlogArticlesItem.data
+                                  .h1Heading
+                              } catch (e) {
+                                if (e instanceof TypeError) {
+                                  return "Enter some text"
+                                }
+                                throw e
+                              }
+                            })()}
+                          </div>
+                        </div>
+                      )}
+                    </ph.DataCtxReader>
+                  </CmsQueryRepeater>
                 </div>
               </section>
             ) : null}
@@ -520,7 +590,7 @@ const PlasmicDescendants = {
     "heroHorizontal",
     "features",
     "blogColumn",
-    "container4",
+    "cmsDataLoader",
     "outer",
     "svg",
     "footerTop",
@@ -529,9 +599,9 @@ const PlasmicDescendants = {
 
   header: ["header"],
   heroHorizontal: ["heroHorizontal"],
-  features: ["features", "blogColumn", "container4"],
-  blogColumn: ["blogColumn", "container4"],
-  container4: ["container4"],
+  features: ["features", "blogColumn", "cmsDataLoader"],
+  blogColumn: ["blogColumn", "cmsDataLoader"],
+  cmsDataLoader: ["cmsDataLoader"],
   outer: ["outer"],
   svg: ["svg"],
   footerTop: ["footerTop"],
@@ -576,7 +646,7 @@ export const PlasmicBlog = Object.assign(
     heroHorizontal: makeNodeComponent("heroHorizontal"),
     features: makeNodeComponent("features"),
     blogColumn: makeNodeComponent("blogColumn"),
-    container4: makeNodeComponent("container4"),
+    cmsDataLoader: makeNodeComponent("cmsDataLoader"),
     outer: makeNodeComponent("outer"),
     svg: makeNodeComponent("svg"),
     footerTop: makeNodeComponent("footerTop"),

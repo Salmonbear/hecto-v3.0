@@ -1156,7 +1156,7 @@ function PlasmicIndex__RenderFunc(props) {
                       sty.text__egxLh
                     )}
                   >
-                    {"© Hecto . All rights reserved"}
+                    {"© Hecto. All rights reserved"}
                   </div>
 
                   <p.PlasmicLink
