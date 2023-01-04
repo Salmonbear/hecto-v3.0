@@ -53,8 +53,7 @@
   align-items: stretch;
   justify-content: flex-start;
   position: relative;
-  background: linear-gradient(#0091ffab, #0091ffab),
-    url("./images/image.jpeg") left 50% top 50% / cover repeat;
+  background: #0091ffab;
   width: 100%;
   min-width: 0;
 }
@@ -194,8 +193,7 @@
   height: auto;
   max-width: 100%;
   background: linear-gradient(#eaeaea, #eaeaea),
-    linear-gradient(#ffffff, #ffffff), linear-gradient(#101111a8, #101111a8),
-    url("./images/image10.jpeg") top 50% left 50% / cover repeat;
+    linear-gradient(#ffffff, #ffffff), #101111a8;
   overflow: auto;
   position: relative;
   margin-top: calc(0px + 0px) !important;

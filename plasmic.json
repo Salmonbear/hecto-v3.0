@@ -302,66 +302,6 @@
       ],
       "images": [
         {
-          "id": "ssY4eBd6pFnM",
-          "name": "image",
-          "filePath": "plasmic/hecto/images/image.jpeg"
-        },
-        {
-          "id": "zO4AW2aiVX6W",
-          "name": "image 2",
-          "filePath": "plasmic/hecto/images/image2.jpeg"
-        },
-        {
-          "id": "1IXdevbAzNR0",
-          "name": "image 3",
-          "filePath": "plasmic/hecto/images/image3.jpeg"
-        },
-        {
-          "id": "3IQtekgXA-cu",
-          "name": "image 4",
-          "filePath": "plasmic/hecto/images/image4.jpeg"
-        },
-        {
-          "id": "lbH9x9KhVAoJ",
-          "name": "image 5",
-          "filePath": "plasmic/hecto/images/image5.jpeg"
-        },
-        {
-          "id": "O2DZIJuvmhEh",
-          "name": "image 6",
-          "filePath": "plasmic/hecto/images/image6.jpeg"
-        },
-        {
-          "id": "brOcscg1GAf7",
-          "name": "image 7",
-          "filePath": "plasmic/hecto/images/image7.png"
-        },
-        {
-          "id": "Lfl1AgRskz8j",
-          "name": "image 8",
-          "filePath": "plasmic/hecto/images/image8.jpeg"
-        },
-        {
-          "id": "kyUeVzWHAJZH",
-          "name": "image 9",
-          "filePath": "plasmic/hecto/images/image9.jpeg"
-        },
-        {
-          "id": "XudyNt_nOUOC",
-          "name": "image 10",
-          "filePath": "plasmic/hecto/images/image10.jpeg"
-        },
-        {
-          "id": "b_G6YVpYtoi1",
-          "name": "image 11",
-          "filePath": "plasmic/hecto/images/image11.jpeg"
-        },
-        {
-          "id": "qTJ9Fp2_1ypq",
-          "name": "image 12",
-          "filePath": "plasmic/hecto/images/image12.jpeg"
-        },
-        {
           "id": "Oy5yWPkj7",
           "name": "image 13",
           "filePath": "plasmic/hecto/images/image13.png"

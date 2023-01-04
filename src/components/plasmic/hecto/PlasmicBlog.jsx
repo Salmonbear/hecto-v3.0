@@ -267,9 +267,12 @@ function PlasmicBlog__RenderFunc(props) {
                   className={classNames(projectcss.all, sty.blogColumn)}
                 >
                   <CmsQueryRepeater
-                    data-plasmic-name={"cmsDataLoader"}
-                    data-plasmic-override={overrides.cmsDataLoader}
-                    className={classNames("__wab_instance", sty.cmsDataLoader)}
+                    data-plasmic-name={"resourcesBlogCms"}
+                    data-plasmic-override={overrides.resourcesBlogCms}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.resourcesBlogCms
+                    )}
                     desc={false}
                     emptyMessage={
                       <ph.DataCtxReader>
@@ -590,7 +593,7 @@ const PlasmicDescendants = {
     "heroHorizontal",
     "features",
     "blogColumn",
-    "cmsDataLoader",
+    "resourcesBlogCms",
     "outer",
     "svg",
     "footerTop",
@@ -599,9 +602,9 @@ const PlasmicDescendants = {
 
   header: ["header"],
   heroHorizontal: ["heroHorizontal"],
-  features: ["features", "blogColumn", "cmsDataLoader"],
-  blogColumn: ["blogColumn", "cmsDataLoader"],
-  cmsDataLoader: ["cmsDataLoader"],
+  features: ["features", "blogColumn", "resourcesBlogCms"],
+  blogColumn: ["blogColumn", "resourcesBlogCms"],
+  resourcesBlogCms: ["resourcesBlogCms"],
   outer: ["outer"],
   svg: ["svg"],
   footerTop: ["footerTop"],
@@ -646,7 +649,7 @@ export const PlasmicBlog = Object.assign(
     heroHorizontal: makeNodeComponent("heroHorizontal"),
     features: makeNodeComponent("features"),
     blogColumn: makeNodeComponent("blogColumn"),
-    cmsDataLoader: makeNodeComponent("cmsDataLoader"),
+    resourcesBlogCms: makeNodeComponent("resourcesBlogCms"),
     outer: makeNodeComponent("outer"),
     svg: makeNodeComponent("svg"),
     footerTop: makeNodeComponent("footerTop"),
