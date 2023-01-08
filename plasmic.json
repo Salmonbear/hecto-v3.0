@@ -266,6 +266,45 @@
           "cssFilePath": "plasmic/hecto/PlasmicArticle.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "8LDofM1DMQp",
+          "name": "CollabArticle",
+          "type": "managed",
+          "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
+          "renderModuleFilePath": "plasmic/hecto/PlasmicCollabArticle.jsx",
+          "importSpec": {
+            "modulePath": "../pages/brand-collaborations/[slug].jsx"
+          },
+          "cssFilePath": "plasmic/hecto/PlasmicCollabArticle.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "Txmbv7ZMqD",
+          "name": "NewPage",
+          "type": "managed",
+          "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
+          "renderModuleFilePath": "plasmic/hecto/PlasmicNewPage.jsx",
+          "importSpec": {
+            "modulePath": "../pages/new-page.jsx"
+          },
+          "cssFilePath": "plasmic/hecto/PlasmicNewPage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "APao_xwWny",
+          "name": "NewPage2",
+          "type": "managed",
+          "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
+          "renderModuleFilePath": "plasmic/hecto/PlasmicNewPage2.jsx",
+          "importSpec": {
+            "modulePath": "../pages/new-page-2.jsx"
+          },
+          "cssFilePath": "plasmic/hecto/PlasmicNewPage2.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
@@ -350,6 +389,56 @@
           "id": "DBFq2ZNDc",
           "name": "growthmentor2.png",
           "filePath": "plasmic/hecto/images/growthmentor2Png.png"
+        },
+        {
+          "id": "IAtipjAEPwY",
+          "name": "image",
+          "filePath": "plasmic/hecto/images/image.jpeg"
+        },
+        {
+          "id": "eP5I02uKSaT",
+          "name": "image 2",
+          "filePath": "plasmic/hecto/images/image2.jpeg"
+        },
+        {
+          "id": "d2vOKMT4zLP",
+          "name": "image 3",
+          "filePath": "plasmic/hecto/images/image3.jpeg"
+        },
+        {
+          "id": "DRBVbi4AYYI",
+          "name": "image 4",
+          "filePath": "plasmic/hecto/images/image4.jpeg"
+        },
+        {
+          "id": "JaJ9qiPRkQA",
+          "name": "image 5",
+          "filePath": "plasmic/hecto/images/image5.jpeg"
+        },
+        {
+          "id": "1jWz4FzZitQ",
+          "name": "image 6",
+          "filePath": "plasmic/hecto/images/image6.jpeg"
+        },
+        {
+          "id": "Tpyz12wfSWE",
+          "name": "image 7",
+          "filePath": "plasmic/hecto/images/image7.jpeg"
+        },
+        {
+          "id": "dfyHQyXnnXr",
+          "name": "image 8",
+          "filePath": "plasmic/hecto/images/image8.jpeg"
+        },
+        {
+          "id": "Mmx30Bhmnt7",
+          "name": "image 9",
+          "filePath": "plasmic/hecto/images/image9.jpeg"
+        },
+        {
+          "id": "CjCB683poJQ",
+          "name": "image 10",
+          "filePath": "plasmic/hecto/images/image10.jpeg"
         }
       ],
       "indirect": false,
@@ -411,6 +500,25 @@
         }
       ],
       "jsBundleThemes": []
+    },
+    {
+      "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
+      "projectApiToken": "uZp069FLSLNVA2dpWnqC3BUaj3flvtNBNXt6e1b67rm4Uh6lGHgYJ65FCBXlOFTB5KDW7RmmOxIAzgHYCg",
+      "projectName": "plasmic-nav",
+      "version": "0.8.0",
+      "cssFilePath": "plasmic/plasmic_nav/plasmic_plasmic_nav.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "jGx9tiKJoex",
+          "name": "NavigationBar",
+          "componentImportPath": "@plasmicpkgs/plasmic-nav"
+        }
+      ]
     }
   ],
   "globalVariants": {

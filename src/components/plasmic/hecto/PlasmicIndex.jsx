@@ -19,6 +19,7 @@ import {
   ensureGlobalVariants,
 } from "@plasmicapp/react-web"
 import Header from "../../Header" // plasmic-import: qDyfn4Gje2P/component
+import { NavigationBar } from "@plasmicpkgs/plasmic-nav" // plasmic-import: jGx9tiKJoex/codeComponent
 import Button from "../../Button" // plasmic-import: 16yj8MRmRBT/component
 import { useScreenVariants as useScreenVariantskILw5UiAaS1UF } from "./PlasmicGlobalVariant__Screen" // plasmic-import: kILw5uiAaS1uF/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css"
@@ -38,6 +39,15 @@ import peopleOutlinesvgHyxjcYqpG7 from "./images/peopleOutlinesvg.svg" // plasmi
 export const PlasmicIndex__VariantProps = new Array()
 
 export const PlasmicIndex__ArgProps = new Array()
+
+const __wrapUserFunction =
+  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn())
+
+const __wrapUserPromise =
+  globalThis.__PlasmicWrapUserPromise ??
+  (async (loc, promise) => {
+    await promise
+  })
 
 export function Head() {
   return (
@@ -106,6 +116,111 @@ function PlasmicIndex__RenderFunc(props) {
                   data-plasmic-name={"header"}
                   data-plasmic-override={overrides.header}
                   className={classNames("__wab_instance", sty.header)}
+                />
+
+                <NavigationBar
+                  data-plasmic-name={"navigationBar"}
+                  data-plasmic-override={overrides.navigationBar}
+                  brand={
+                    <p.PlasmicLink
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.link__rEoJj
+                      )}
+                      component={Link}
+                      href={"#"}
+                      platform={"gatsby"}
+                    >
+                      <p.PlasmicImg
+                        alt={""}
+                        className={classNames(sty.img___8Exzn)}
+                        displayHeight={"40px"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"none"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"auto"}
+                        src={
+                          "https://static1.plasmic.app/nav-logo-placeholder.svg"
+                        }
+                      />
+                    </p.PlasmicLink>
+                  }
+                  className={classNames("__wab_instance", sty.navigationBar)}
+                  closeButton={
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img__lsX96)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"none"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      src={"https://static1.plasmic.app/close.svg"}
+                    />
+                  }
+                  itemsGap={8}
+                  menuItems={
+                    <React.Fragment>
+                      <p.PlasmicLink
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          projectcss.__wab_text,
+                          sty.link___5Tzig
+                        )}
+                        component={Link}
+                        href={"/"}
+                        platform={"gatsby"}
+                      >
+                        {"Blog"}
+                      </p.PlasmicLink>
+
+                      <p.PlasmicLink
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          projectcss.__wab_text,
+                          sty.link___17LC3
+                        )}
+                        component={Link}
+                        href={"/"}
+                        platform={"gatsby"}
+                      >
+                        {"About"}
+                      </p.PlasmicLink>
+
+                      <p.PlasmicLink
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          projectcss.__wab_text,
+                          sty.link__lpi3A
+                        )}
+                        component={Link}
+                        href={"/"}
+                        platform={"gatsby"}
+                      >
+                        {"Contact"}
+                      </p.PlasmicLink>
+                    </React.Fragment>
+                  }
+                  openButton={
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img__v9N5J)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"none"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      src={"https://static1.plasmic.app/menu.svg"}
+                    />
+                  }
+                  responsiveBreakpoint={768}
                 />
 
                 <div className={classNames(projectcss.all, sty.freeBox__jBkIg)}>
@@ -1222,6 +1337,7 @@ const PlasmicDescendants = {
   root: [
     "root",
     "header",
+    "navigationBar",
     "features",
     "container4",
     "outerRow2",
@@ -1241,6 +1357,7 @@ const PlasmicDescendants = {
   ],
 
   header: ["header"],
+  navigationBar: ["navigationBar"],
   features: [
     "features",
     "container4",
@@ -1303,6 +1420,7 @@ export const PlasmicIndex = Object.assign(
   {
     // Helper components rendering sub-elements
     header: makeNodeComponent("header"),
+    navigationBar: makeNodeComponent("navigationBar"),
     features: makeNodeComponent("features"),
     container4: makeNodeComponent("container4"),
     outerRow2: makeNodeComponent("outerRow2"),

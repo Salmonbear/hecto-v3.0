@@ -31,6 +31,15 @@ export const PlasmicBlog__VariantProps = new Array()
 
 export const PlasmicBlog__ArgProps = new Array()
 
+const __wrapUserFunction =
+  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn())
+
+const __wrapUserPromise =
+  globalThis.__PlasmicWrapUserPromise ??
+  (async (loc, promise) => {
+    await promise
+  })
+
 export function Head() {
   return (
     <>

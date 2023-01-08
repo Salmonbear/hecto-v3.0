@@ -42,6 +42,15 @@ export const PlasmicButton__ArgProps = new Array(
   "link"
 )
 
+const __wrapUserFunction =
+  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn())
+
+const __wrapUserPromise =
+  globalThis.__PlasmicWrapUserPromise ??
+  (async (loc, promise) => {
+    await promise
+  })
+
 function PlasmicButton__RenderFunc(props) {
   const { variants, overrides, forNode } = props
   const $ctx = ph.useDataEnv?.() || {}
