@@ -711,7 +711,7 @@
   top: 98px;
   z-index: 111;
   min-width: 0;
-  padding: 30px;
+  padding: 30px 30px 63px;
   border-left: 8px solid #f4efeb;
 }
 .freeBox__zwqnp > :global(.__wab_flex-container) {
