@@ -172,7 +172,7 @@ function PlasmicIndex__RenderFunc(props) {
                           sty.link___5Tzig
                         )}
                         component={Link}
-                        href={"https://hecto.io/creators"}
+                        href={"https://hecto.io/newsletter-creators"}
                         platform={"gatsby"}
                         title={"Creators"}
                       >
@@ -201,7 +201,7 @@ function PlasmicIndex__RenderFunc(props) {
                           sty.link__lpi3A
                         )}
                         component={Link}
-                        href={"/"}
+                        href={"https://hecto.io/search"}
                         platform={"gatsby"}
                       >
                         {"Search"}
@@ -217,7 +217,7 @@ function PlasmicIndex__RenderFunc(props) {
                           sty.pricing
                         )}
                         component={Link}
-                        href={"/"}
+                        href={"https://hecto.io/pricing"}
                         platform={"gatsby"}
                       >
                         {"Pricing"}
@@ -231,7 +231,7 @@ function PlasmicIndex__RenderFunc(props) {
                           sty.link__ag7Rt
                         )}
                         component={Link}
-                        href={"/"}
+                        href={"https://hecto.io/login"}
                         platform={"gatsby"}
                       >
                         {"Sign In"}
@@ -247,7 +247,7 @@ function PlasmicIndex__RenderFunc(props) {
                           sty.signUp
                         )}
                         component={Link}
-                        href={"/"}
+                        href={"https://hecto.io/login"}
                         platform={"gatsby"}
                       >
                         <React.Fragment>
