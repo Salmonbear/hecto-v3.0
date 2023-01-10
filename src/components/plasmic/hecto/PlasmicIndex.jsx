@@ -13,12 +13,12 @@ import { Link } from "gatsby"
 import * as p from "@plasmicapp/react-web"
 import * as ph from "@plasmicapp/host"
 import {
+  hasVariant,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
   ensureGlobalVariants,
 } from "@plasmicapp/react-web"
-import Header from "../../Header" // plasmic-import: qDyfn4Gje2P/component
 import { NavigationBar } from "@plasmicpkgs/plasmic-nav" // plasmic-import: jGx9tiKJoex/codeComponent
 import Button from "../../Button" // plasmic-import: 16yj8MRmRBT/component
 import { useScreenVariants as useScreenVariantskILw5UiAaS1UF } from "./PlasmicGlobalVariant__Screen" // plasmic-import: kILw5uiAaS1uF/globalVariant
@@ -112,12 +112,6 @@ function PlasmicIndex__RenderFunc(props) {
           >
             <div className={classNames(projectcss.all, sty.freeBox__uVixW)}>
               <div className={classNames(projectcss.all, sty.freeBox___6G6Bl)}>
-                <Header
-                  data-plasmic-name={"header"}
-                  data-plasmic-override={overrides.header}
-                  className={classNames("__wab_instance", sty.header)}
-                />
-
                 <NavigationBar
                   data-plasmic-name={"navigationBar"}
                   data-plasmic-override={overrides.navigationBar}
@@ -132,19 +126,25 @@ function PlasmicIndex__RenderFunc(props) {
                       href={"#"}
                       platform={"gatsby"}
                     >
-                      <p.PlasmicImg
-                        alt={""}
-                        className={classNames(sty.img___8Exzn)}
-                        displayHeight={"40px"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"none"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"auto"}
-                        src={
-                          "https://static1.plasmic.app/nav-logo-placeholder.svg"
-                        }
-                      />
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__kGTg8
+                        )}
+                      >
+                        <React.Fragment>
+                          <React.Fragment>{"hecto"}</React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "#FF0000" }}
+                          >
+                            {"."}
+                          </span>
+                        </React.Fragment>
+                      </div>
                     </p.PlasmicLink>
                   }
                   className={classNames("__wab_instance", sty.navigationBar)}
@@ -172,10 +172,11 @@ function PlasmicIndex__RenderFunc(props) {
                           sty.link___5Tzig
                         )}
                         component={Link}
-                        href={"/"}
+                        href={"https://hecto.io/creators"}
                         platform={"gatsby"}
+                        title={"Creators"}
                       >
-                        {"Blog"}
+                        {"Creators"}
                       </p.PlasmicLink>
 
                       <p.PlasmicLink
@@ -186,10 +187,10 @@ function PlasmicIndex__RenderFunc(props) {
                           sty.link___17LC3
                         )}
                         component={Link}
-                        href={"/"}
+                        href={`/blog`}
                         platform={"gatsby"}
                       >
-                        {"About"}
+                        {"Blog"}
                       </p.PlasmicLink>
 
                       <p.PlasmicLink
@@ -203,7 +204,62 @@ function PlasmicIndex__RenderFunc(props) {
                         href={"/"}
                         platform={"gatsby"}
                       >
-                        {"Contact"}
+                        {"Search"}
+                      </p.PlasmicLink>
+
+                      <p.PlasmicLink
+                        data-plasmic-name={"pricing"}
+                        data-plasmic-override={overrides.pricing}
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          projectcss.__wab_text,
+                          sty.pricing
+                        )}
+                        component={Link}
+                        href={"/"}
+                        platform={"gatsby"}
+                      >
+                        {"Pricing"}
+                      </p.PlasmicLink>
+
+                      <p.PlasmicLink
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          projectcss.__wab_text,
+                          sty.link__ag7Rt
+                        )}
+                        component={Link}
+                        href={"/"}
+                        platform={"gatsby"}
+                      >
+                        {"Sign In"}
+                      </p.PlasmicLink>
+
+                      <p.PlasmicLink
+                        data-plasmic-name={"signUp"}
+                        data-plasmic-override={overrides.signUp}
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          projectcss.__wab_text,
+                          sty.signUp
+                        )}
+                        component={Link}
+                        href={"/"}
+                        platform={"gatsby"}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ fontWeight: 700, color: "#FFFFFF" }}
+                          >
+                            {"Sign Up"}
+                          </span>
+                        </React.Fragment>
                       </p.PlasmicLink>
                     </React.Fragment>
                   }
@@ -315,6 +371,7 @@ function PlasmicIndex__RenderFunc(props) {
                             "__wab_instance",
                             sty.button___7357C
                           )}
+                          color={"secondary"}
                           endIcon={
                             <ArrowRightsvgIcon
                               className={classNames(
@@ -332,7 +389,16 @@ function PlasmicIndex__RenderFunc(props) {
                               sty.text__gw0T9
                             )}
                           >
-                            {"Buy Ads"}
+                            <React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ color: "#FF0000" }}
+                              >
+                                {"Buy Ads"}
+                              </span>
+                            </React.Fragment>
                           </div>
                         </Button>
 
@@ -349,6 +415,11 @@ function PlasmicIndex__RenderFunc(props) {
                               )}
                               role={"img"}
                             />
+                          }
+                          link={
+                            hasVariant(globalVariants, "screen", "mobileOnly")
+                              ? "https://app.hecto.io/search"
+                              : "https://hecto.io/creators"
                           }
                         >
                           <div
@@ -1228,8 +1299,6 @@ function PlasmicIndex__RenderFunc(props) {
                         role={"img"}
                       />
                     }
-                    shape={"rounded"}
-                    showEndIcon={true}
                   >
                     <div
                       className={classNames(
@@ -1336,8 +1405,9 @@ function PlasmicIndex__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "header",
     "navigationBar",
+    "pricing",
+    "signUp",
     "features",
     "container4",
     "outerRow2",
@@ -1356,8 +1426,9 @@ const PlasmicDescendants = {
     "footerBottom",
   ],
 
-  header: ["header"],
-  navigationBar: ["navigationBar"],
+  navigationBar: ["navigationBar", "pricing", "signUp"],
+  pricing: ["pricing"],
+  signUp: ["signUp"],
   features: [
     "features",
     "container4",
@@ -1419,8 +1490,9 @@ export const PlasmicIndex = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    header: makeNodeComponent("header"),
     navigationBar: makeNodeComponent("navigationBar"),
+    pricing: makeNodeComponent("pricing"),
+    signUp: makeNodeComponent("signUp"),
     features: makeNodeComponent("features"),
     container4: makeNodeComponent("container4"),
     outerRow2: makeNodeComponent("outerRow2"),

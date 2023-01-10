@@ -63,13 +63,6 @@
     min-width: 0;
   }
 }
-.header:global(.__wab_instance) {
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
 .navigationBar:global(.__wab_instance) {
   width: 100%;
   display: flex;
@@ -77,10 +70,12 @@
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   max-width: 100%;
   object-fit: cover;
   position: relative;
+  align-self: center;
+  background: #ffffff;
   padding: 16px;
 }
 .link__rEoJj {
@@ -95,15 +90,16 @@
   min-width: 0;
   padding: 0px;
 }
-.img___8Exzn {
-  object-fit: cover;
-  height: 40px;
-}
-.img___8Exzn > picture > img {
-  object-fit: cover;
-}
-.img___8Exzn > :global(.__wab_img-spacer) > img {
-  object-fit: cover;
+.text__kGTg8 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  color: #0205d3;
+  font-weight: 700;
+  align-self: center;
+  font-size: 28px;
+  min-width: 0;
 }
 .img__v9N5J {
   object-fit: cover;
@@ -128,18 +124,56 @@
   width: auto;
   height: auto;
   max-width: 800px;
+  color: #0506cf;
+  text-align: center;
+  padding: var(--token-eeq5mwYJh);
 }
 .link___17LC3 {
   position: relative;
   width: auto;
   height: auto;
   max-width: 800px;
+  color: #0506cf;
+  text-align: center;
+  padding: var(--token-eeq5mwYJh);
 }
 .link__lpi3A {
   position: relative;
   width: auto;
   height: auto;
   max-width: 800px;
+  color: #0506cf;
+  text-align: center;
+  padding: var(--token-eeq5mwYJh);
+}
+.pricing {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 800px;
+  color: #0506cf;
+  text-align: center;
+  padding: var(--token-eeq5mwYJh);
+}
+.link__ag7Rt {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 800px;
+  color: #0506cf;
+  text-align: center;
+  padding: var(--token-eeq5mwYJh);
+}
+.signUp {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 800px;
+  color: #0506cf;
+  background: #0205d3;
+  text-align: center;
+  border-radius: 5px;
+  padding: var(--token-eeq5mwYJh);
 }
 .freeBox__jBkIg {
   display: flex;
@@ -376,6 +410,11 @@
   user-select: text;
   text-decoration-line: none !important;
   text-overflow: clip !important;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .text__mvf70 {
+    color: #ffff91;
+  }
 }
 .svg__kftcD {
   position: relative;

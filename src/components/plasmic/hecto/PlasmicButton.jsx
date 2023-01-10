@@ -134,13 +134,13 @@ function PlasmicButton__RenderFunc(props) {
           [sty.root___focusVisibleWithin]: triggers.focusVisibleWithin_root,
           [sty.rootcolor_blue]: hasVariant($state, "color", "blue"),
           [sty.rootcolor_clear]: hasVariant($state, "color", "clear"),
-          [sty.rootcolor_green]: hasVariant($state, "color", "green"),
           [sty.rootcolor_link]: hasVariant($state, "color", "link"),
           [sty.rootcolor_link_size_minimal]:
             hasVariant($state, "color", "link") &&
             hasVariant($state, "size", "minimal"),
           [sty.rootcolor_red]: hasVariant($state, "color", "red"),
           [sty.rootcolor_sand]: hasVariant($state, "color", "sand"),
+          [sty.rootcolor_secondary]: hasVariant($state, "color", "secondary"),
           [sty.rootcolor_softBlue]: hasVariant($state, "color", "softBlue"),
           [sty.rootcolor_softGreen]: hasVariant($state, "color", "softGreen"),
           [sty.rootcolor_softRed]: hasVariant($state, "color", "softRed"),
@@ -319,7 +319,25 @@ function PlasmicButton__RenderFunc(props) {
         })}
       >
         {p.renderPlasmicSlot({
-          defaultContents: "Button",
+          defaultContents: (
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__lWviw
+              )}
+            >
+              <React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ color: "#FF0000" }}
+                >
+                  {"Button"}
+                </span>
+              </React.Fragment>
+            </div>
+          ),
+
           value: args.children,
           className: classNames(sty.slotTargetChildren, {
             [sty.slotTargetChildren___focusVisibleWithin]:
@@ -334,12 +352,6 @@ function PlasmicButton__RenderFunc(props) {
               $state,
               "color",
               "clear"
-            ),
-
-            [sty.slotTargetChildrencolor_green]: hasVariant(
-              $state,
-              "color",
-              "green"
             ),
 
             [sty.slotTargetChildrencolor_link]: hasVariant(
@@ -361,6 +373,12 @@ function PlasmicButton__RenderFunc(props) {
               $state,
               "color",
               "sand"
+            ),
+
+            [sty.slotTargetChildrencolor_secondary]: hasVariant(
+              $state,
+              "color",
+              "secondary"
             ),
 
             [sty.slotTargetChildrencolor_softBlue]: hasVariant(

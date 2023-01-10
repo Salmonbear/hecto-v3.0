@@ -7,6 +7,10 @@
   --plasmic-token-purple-blue: var(--token-m4WAv9TKS);
   --token-7bMEPCZSz: #676767;
   --plasmic-token-grey: var(--token-7bMEPCZSz);
+  --token-OA3-5HlnW: var(--token-eeq5mwYJh);
+  --plasmic-token-unnamed-style-token: var(--token-OA3-5HlnW);
+  --token-eeq5mwYJh: 10px;
+  --plasmic-token-menu: var(--token-eeq5mwYJh);
 }
 
 .plasmic_default_styles,

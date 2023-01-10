@@ -292,7 +292,6 @@ function PlasmicArticle__RenderFunc(props) {
                         role={"img"}
                       />
                     }
-                    shape={"rounded"}
                     showEndIcon={true}
                   >
                     <div

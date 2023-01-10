@@ -11,6 +11,16 @@
       }
     },
     {
+      "name": "Menu",
+      "type": "spacing",
+      "value": "10px",
+      "category": "spacing",
+      "meta": {
+        "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
+        "id": "eeq5mwYJh"
+      }
+    },
+    {
       "name": "PurpleBlue",
       "type": "color",
       "value": "#67679F",
@@ -18,6 +28,16 @@
       "meta": {
         "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
         "id": "m4WAv9TKS"
+      }
+    },
+    {
+      "name": "UnnamedStyleToken",
+      "type": "spacing",
+      "value": "10px",
+      "category": "spacing",
+      "meta": {
+        "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
+        "id": "OA3-5HlnW"
       }
     },
     {

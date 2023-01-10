@@ -2,7 +2,7 @@
   flex-direction: row;
   display: flex;
   position: relative;
-  background: #232320;
+  background: #ff0000;
   cursor: pointer;
   transition-property: background;
   transition-duration: 0.1s;
@@ -28,8 +28,9 @@
 .rootshowStartIcon {
   padding-left: 16px;
 }
-.rootcolor_green {
-  background: #30a46c;
+.rootcolor_secondary {
+  background: #ffffff;
+  border: 2px solid #ff0000;
 }
 .rootcolor_yellow {
   background: #f5d90a;
@@ -103,9 +104,9 @@
   padding-right: 16px;
 }
 .root:hover {
-  background: #282826;
+  background: #e77777;
 }
-.rootcolor_green:hover {
+.rootcolor_secondary:hover {
   background: #3cb179;
 }
 .rootcolor_yellow:hover {
@@ -153,9 +154,10 @@
   outline: none;
 }
 .root:active {
-  background: #2e2e2b;
+  background: #c30000;
+  height: auto;
 }
-.rootcolor_green:active {
+.rootcolor_secondary:active {
   background: #4cc38a;
 }
 .rootcolor_yellow:active {
@@ -262,7 +264,7 @@
   font-weight: 500;
   white-space: pre;
 }
-.slotTargetChildrencolor_green {
+.slotTargetChildrencolor_secondary {
   color: #ffffff;
 }
 .slotTargetChildrencolor_yellow {
@@ -406,6 +408,10 @@
 }
 .rootcolor_link:active .slotTargetChildrencolor_link {
   color: #006adc;
+}
+.text__lWviw {
+  color: #ff0000;
+  height: auto;
 }
 .endIconContainer {
   display: flex;
