@@ -235,7 +235,7 @@
           "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
           "renderModuleFilePath": "plasmic/hecto/PlasmicBlog.jsx",
           "importSpec": {
-            "modulePath": "../pages/blog.jsx"
+            "modulePath": "../pages/resources.jsx"
           },
           "cssFilePath": "plasmic/hecto/PlasmicBlog.module.css",
           "scheme": "blackbox",
@@ -268,19 +268,6 @@
           "componentType": "page"
         },
         {
-          "id": "8LDofM1DMQp",
-          "name": "CollabArticle",
-          "type": "managed",
-          "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
-          "renderModuleFilePath": "plasmic/hecto/PlasmicCollabArticle.jsx",
-          "importSpec": {
-            "modulePath": "../pages/brand-collaborations/[slug].jsx"
-          },
-          "cssFilePath": "plasmic/hecto/PlasmicCollabArticle.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
           "id": "Txmbv7ZMqD",
           "name": "NewPage",
           "type": "managed",
@@ -305,6 +292,45 @@
           "cssFilePath": "plasmic/hecto/PlasmicNewPage2.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "8LDofM1DMQp",
+          "name": "Newsletter",
+          "type": "managed",
+          "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
+          "renderModuleFilePath": "plasmic/hecto/PlasmicNewsletter.jsx",
+          "importSpec": {
+            "modulePath": "../pages/newsletter.jsx"
+          },
+          "cssFilePath": "plasmic/hecto/PlasmicNewsletter.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "mqmd6Ir3zvv",
+          "name": "Newsletter2",
+          "type": "managed",
+          "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
+          "renderModuleFilePath": "plasmic/hecto/PlasmicNewsletter2.jsx",
+          "importSpec": {
+            "modulePath": "../pages/search.jsx"
+          },
+          "cssFilePath": "plasmic/hecto/PlasmicNewsletter2.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "1Xqtr1aGys",
+          "name": "HectoNav",
+          "type": "managed",
+          "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
+          "renderModuleFilePath": "plasmic/hecto/PlasmicHectoNav.jsx",
+          "importSpec": {
+            "modulePath": "HectoNav.jsx"
+          },
+          "cssFilePath": "plasmic/hecto/PlasmicHectoNav.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -542,6 +568,6 @@
   "gatsbyConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.190",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.190/dist/plasmic.schema.json"
+  "cliVersion": "0.1.192",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.192/dist/plasmic.schema.json"
 }

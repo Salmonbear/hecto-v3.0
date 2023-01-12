@@ -174,7 +174,7 @@ function PlasmicHeader__RenderFunc(props) {
                 sty.link__fgYc
               )}
               component={Link}
-              href={`/blog`}
+              href={`/resources`}
               platform={"gatsby"}
             >
               {"Blog"}

@@ -19,7 +19,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants,
 } from "@plasmicapp/react-web"
-import { NavigationBar } from "@plasmicpkgs/plasmic-nav" // plasmic-import: jGx9tiKJoex/codeComponent
+import HectoNav from "../../HectoNav" // plasmic-import: 1Xqtr1aGys/component
 import Button from "../../Button" // plasmic-import: 16yj8MRmRBT/component
 import { useScreenVariants as useScreenVariantskILw5UiAaS1UF } from "./PlasmicGlobalVariant__Screen" // plasmic-import: kILw5uiAaS1uF/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css"
@@ -112,171 +112,10 @@ function PlasmicIndex__RenderFunc(props) {
           >
             <div className={classNames(projectcss.all, sty.freeBox__uVixW)}>
               <div className={classNames(projectcss.all, sty.freeBox___6G6Bl)}>
-                <NavigationBar
-                  data-plasmic-name={"navigationBar"}
-                  data-plasmic-override={overrides.navigationBar}
-                  brand={
-                    <p.PlasmicLink
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.a,
-                        sty.link__rEoJj
-                      )}
-                      component={Link}
-                      href={"#"}
-                      platform={"gatsby"}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__kGTg8
-                        )}
-                      >
-                        <React.Fragment>
-                          <React.Fragment>{"hecto"}</React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "#FF0000" }}
-                          >
-                            {"."}
-                          </span>
-                        </React.Fragment>
-                      </div>
-                    </p.PlasmicLink>
-                  }
-                  className={classNames("__wab_instance", sty.navigationBar)}
-                  closeButton={
-                    <p.PlasmicImg
-                      alt={""}
-                      className={classNames(sty.img__lsX96)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"none"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      src={"https://static1.plasmic.app/close.svg"}
-                    />
-                  }
-                  itemsGap={8}
-                  menuItems={
-                    <React.Fragment>
-                      <p.PlasmicLink
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          projectcss.__wab_text,
-                          sty.link___5Tzig
-                        )}
-                        component={Link}
-                        href={"https://hecto.io/newsletter-creators"}
-                        platform={"gatsby"}
-                        title={"Creators"}
-                      >
-                        {"Creators"}
-                      </p.PlasmicLink>
-
-                      <p.PlasmicLink
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          projectcss.__wab_text,
-                          sty.link___17LC3
-                        )}
-                        component={Link}
-                        href={`/blog`}
-                        platform={"gatsby"}
-                      >
-                        {"Blog"}
-                      </p.PlasmicLink>
-
-                      <p.PlasmicLink
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          projectcss.__wab_text,
-                          sty.link__lpi3A
-                        )}
-                        component={Link}
-                        href={"https://hecto.io/search"}
-                        platform={"gatsby"}
-                      >
-                        {"Search"}
-                      </p.PlasmicLink>
-
-                      <p.PlasmicLink
-                        data-plasmic-name={"pricing"}
-                        data-plasmic-override={overrides.pricing}
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          projectcss.__wab_text,
-                          sty.pricing
-                        )}
-                        component={Link}
-                        href={"https://hecto.io/pricing"}
-                        platform={"gatsby"}
-                      >
-                        {"Pricing"}
-                      </p.PlasmicLink>
-
-                      <p.PlasmicLink
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          projectcss.__wab_text,
-                          sty.link__ag7Rt
-                        )}
-                        component={Link}
-                        href={"https://hecto.io/login"}
-                        platform={"gatsby"}
-                      >
-                        {"Sign In"}
-                      </p.PlasmicLink>
-
-                      <p.PlasmicLink
-                        data-plasmic-name={"signUp"}
-                        data-plasmic-override={overrides.signUp}
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          projectcss.__wab_text,
-                          sty.signUp
-                        )}
-                        component={Link}
-                        href={"https://hecto.io/login"}
-                        platform={"gatsby"}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ fontWeight: 700, color: "#FFFFFF" }}
-                          >
-                            {"Sign Up"}
-                          </span>
-                        </React.Fragment>
-                      </p.PlasmicLink>
-                    </React.Fragment>
-                  }
-                  openButton={
-                    <p.PlasmicImg
-                      alt={""}
-                      className={classNames(sty.img__v9N5J)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"none"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      src={"https://static1.plasmic.app/menu.svg"}
-                    />
-                  }
-                  responsiveBreakpoint={768}
+                <HectoNav
+                  data-plasmic-name={"hectoNav"}
+                  data-plasmic-override={overrides.hectoNav}
+                  className={classNames("__wab_instance", sty.hectoNav)}
                 />
 
                 <div className={classNames(projectcss.all, sty.freeBox__jBkIg)}>
@@ -1320,18 +1159,6 @@ function PlasmicIndex__RenderFunc(props) {
                 data-plasmic-override={overrides.footerBottom}
                 className={classNames(projectcss.all, sty.footerBottom)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__id2Cu)}>
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link__jzMtv
-                    )}
-                    component={Link}
-                    platform={"gatsby"}
-                  />
-                </div>
-
                 <div className={classNames(projectcss.all, sty.freeBox__eUaht)}>
                   <div
                     className={classNames(
@@ -1344,10 +1171,12 @@ function PlasmicIndex__RenderFunc(props) {
                   </div>
 
                   <p.PlasmicLink
+                    data-plasmic-name={"link"}
+                    data-plasmic-override={overrides.link}
                     className={classNames(
                       projectcss.all,
                       projectcss.a,
-                      sty.link__nhI
+                      sty.link
                     )}
                     component={Link}
                     platform={"gatsby"}
@@ -1405,9 +1234,7 @@ function PlasmicIndex__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "navigationBar",
-    "pricing",
-    "signUp",
+    "hectoNav",
     "features",
     "container4",
     "outerRow2",
@@ -1424,11 +1251,10 @@ const PlasmicDescendants = {
     "outer",
     "container",
     "footerBottom",
+    "link",
   ],
 
-  navigationBar: ["navigationBar", "pricing", "signUp"],
-  pricing: ["pricing"],
-  signUp: ["signUp"],
+  hectoNav: ["hectoNav"],
   features: [
     "features",
     "container4",
@@ -1453,7 +1279,8 @@ const PlasmicDescendants = {
   reasonBox6: ["reasonBox6"],
   outer: ["outer", "container"],
   container: ["container"],
-  footerBottom: ["footerBottom"],
+  footerBottom: ["footerBottom", "link"],
+  link: ["link"],
 }
 
 function makeNodeComponent(nodeName) {
@@ -1490,9 +1317,7 @@ export const PlasmicIndex = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    navigationBar: makeNodeComponent("navigationBar"),
-    pricing: makeNodeComponent("pricing"),
-    signUp: makeNodeComponent("signUp"),
+    hectoNav: makeNodeComponent("hectoNav"),
     features: makeNodeComponent("features"),
     container4: makeNodeComponent("container4"),
     outerRow2: makeNodeComponent("outerRow2"),
@@ -1509,6 +1334,7 @@ export const PlasmicIndex = Object.assign(
     outer: makeNodeComponent("outer"),
     container: makeNodeComponent("container"),
     footerBottom: makeNodeComponent("footerBottom"),
+    link: makeNodeComponent("link"),
     // Metadata about props expected for PlasmicIndex
     internalVariantProps: PlasmicIndex__VariantProps,
     internalArgProps: PlasmicIndex__ArgProps,

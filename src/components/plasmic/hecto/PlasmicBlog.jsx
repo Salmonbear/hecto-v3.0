@@ -18,7 +18,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants,
 } from "@plasmicapp/react-web"
-import Header from "../../Header" // plasmic-import: qDyfn4Gje2P/component
+import HectoNav from "../../HectoNav" // plasmic-import: 1Xqtr1aGys/component
 import { CmsQueryRepeater } from "@plasmicpkgs/plasmic-cms" // plasmic-import: 8N9-WfZSaq/codeComponent
 import Button from "../../Button" // plasmic-import: 16yj8MRmRBT/component
 import { useScreenVariants as useScreenVariantskILw5UiAaS1UF } from "./PlasmicGlobalVariant__Screen" // plasmic-import: kILw5uiAaS1uF/globalVariant
@@ -103,10 +103,10 @@ function PlasmicBlog__RenderFunc(props) {
           >
             <div className={classNames(projectcss.all, sty.freeBox__uXfUn)}>
               <div className={classNames(projectcss.all, sty.freeBox__jNgxc)}>
-                <Header
-                  data-plasmic-name={"header"}
-                  data-plasmic-override={overrides.header}
-                  className={classNames("__wab_instance", sty.header)}
+                <HectoNav
+                  data-plasmic-name={"hectoNav"}
+                  data-plasmic-override={overrides.hectoNav}
+                  className={classNames("__wab_instance", sty.hectoNav)}
                 />
 
                 <div
@@ -365,7 +365,9 @@ function PlasmicBlog__RenderFunc(props) {
                   className={classNames(projectcss.all, sty.outer)}
                 >
                   <div
-                    className={classNames(projectcss.all, sty.columns__bOPoB)}
+                    data-plasmic-name={"container"}
+                    data-plasmic-override={overrides.container}
+                    className={classNames(projectcss.all, sty.container)}
                   >
                     <div
                       className={classNames(projectcss.all, sty.column__fUvPn)}
@@ -489,34 +491,6 @@ function PlasmicBlog__RenderFunc(props) {
 
             <div className={classNames(projectcss.all, sty.freeBox__sok7B)}>
               <div
-                data-plasmic-name={"footerTop"}
-                data-plasmic-override={overrides.footerTop}
-                className={classNames(projectcss.all, sty.footerTop)}
-              >
-                <div className={classNames(projectcss.all, sty.freeBox__ow4Ow)}>
-                  <div
-                    className={classNames(projectcss.all, sty.columns__h66Jq)}
-                  >
-                    <p.Stack
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.column__my0BQ)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__fwyIt
-                        )}
-                      >
-                        {""}
-                      </div>
-                    </p.Stack>
-                  </div>
-                </div>
-              </div>
-
-              <div
                 data-plasmic-name={"footerBottom"}
                 data-plasmic-override={overrides.footerBottom}
                 className={classNames(projectcss.all, sty.footerBottom)}
@@ -598,25 +572,25 @@ function PlasmicBlog__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "header",
+    "hectoNav",
     "heroHorizontal",
     "features",
     "blogColumn",
     "resourcesBlogCms",
     "outer",
+    "container",
     "svg",
-    "footerTop",
     "footerBottom",
   ],
 
-  header: ["header"],
+  hectoNav: ["hectoNav"],
   heroHorizontal: ["heroHorizontal"],
   features: ["features", "blogColumn", "resourcesBlogCms"],
   blogColumn: ["blogColumn", "resourcesBlogCms"],
   resourcesBlogCms: ["resourcesBlogCms"],
-  outer: ["outer"],
+  outer: ["outer", "container"],
+  container: ["container"],
   svg: ["svg"],
-  footerTop: ["footerTop"],
   footerBottom: ["footerBottom"],
 }
 
@@ -654,14 +628,14 @@ export const PlasmicBlog = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    header: makeNodeComponent("header"),
+    hectoNav: makeNodeComponent("hectoNav"),
     heroHorizontal: makeNodeComponent("heroHorizontal"),
     features: makeNodeComponent("features"),
     blogColumn: makeNodeComponent("blogColumn"),
     resourcesBlogCms: makeNodeComponent("resourcesBlogCms"),
     outer: makeNodeComponent("outer"),
+    container: makeNodeComponent("container"),
     svg: makeNodeComponent("svg"),
-    footerTop: makeNodeComponent("footerTop"),
     footerBottom: makeNodeComponent("footerBottom"),
     // Metadata about props expected for PlasmicBlog
     internalVariantProps: PlasmicBlog__VariantProps,

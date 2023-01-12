@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "@plasmicapp/cli": "^0.1.190",
+    "@plasmicapp/cli": "^0.1.192",
     "@plasmicapp/host": "^1.0.41",
     "@plasmicapp/react-web": "^0.2.134",
     "@plasmicpkgs/antd": "0.0.47",
