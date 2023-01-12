@@ -161,7 +161,7 @@ function PlasmicBlog__RenderFunc(props) {
                                       fontWeight: 700,
                                     }}
                                   >
-                                    {"The Hecto Blog"}
+                                    {"Hecto Resources"}
                                   </span>
                                   <React.Fragment>{""}</React.Fragment>
                                   <span

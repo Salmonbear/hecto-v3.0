@@ -105,7 +105,7 @@ function PlasmicHectoNav__RenderFunc(props) {
               sty.link__gyu5T
             )}
             component={Link}
-            href={"https://hecto.io/newsletter-creators"}
+            href={"https://app.hecto.io/newsletter-creators"}
             platform={"gatsby"}
             title={"Creators"}
           >
@@ -123,7 +123,7 @@ function PlasmicHectoNav__RenderFunc(props) {
             href={`/resources`}
             platform={"gatsby"}
           >
-            {"Blog"}
+            {"Resources"}
           </p.PlasmicLink>
 
           <p.PlasmicLink
@@ -134,7 +134,7 @@ function PlasmicHectoNav__RenderFunc(props) {
               sty.link__esyf1
             )}
             component={Link}
-            href={"https://hecto.io/search"}
+            href={"https://app.hecto.io/search"}
             platform={"gatsby"}
           >
             {"Search"}
@@ -150,7 +150,7 @@ function PlasmicHectoNav__RenderFunc(props) {
               sty.pricing
             )}
             component={Link}
-            href={"https://hecto.io/pricing"}
+            href={"https://app.hecto.io/pricing"}
             platform={"gatsby"}
           >
             {"Pricing"}
