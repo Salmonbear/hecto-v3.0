@@ -261,7 +261,7 @@
           "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
           "renderModuleFilePath": "plasmic/hecto/PlasmicArticle.jsx",
           "importSpec": {
-            "modulePath": "../pages/blog/[slug].jsx"
+            "modulePath": "../pages/resources/[slug].jsx"
           },
           "cssFilePath": "plasmic/hecto/PlasmicArticle.module.css",
           "scheme": "blackbox",
