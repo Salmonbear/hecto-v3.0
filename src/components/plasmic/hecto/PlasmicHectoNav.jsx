@@ -164,7 +164,7 @@ function PlasmicHectoNav__RenderFunc(props) {
               sty.link__ywDm
             )}
             component={Link}
-            href={"https://hecto.io/login"}
+            href={"https://app.hecto.io/login"}
             platform={"gatsby"}
           >
             {"Sign In"}
@@ -180,7 +180,7 @@ function PlasmicHectoNav__RenderFunc(props) {
               sty.signUp
             )}
             component={Link}
-            href={"https://hecto.io/login"}
+            href={"https://app.hecto.io/login"}
             platform={"gatsby"}
           >
             <React.Fragment>

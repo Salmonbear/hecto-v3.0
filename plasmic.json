@@ -229,19 +229,6 @@
           "componentType": "component"
         },
         {
-          "id": "C5n9cmwHg6f",
-          "name": "Blog",
-          "type": "managed",
-          "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
-          "renderModuleFilePath": "plasmic/hecto/PlasmicBlog.jsx",
-          "importSpec": {
-            "modulePath": "../pages/resources.jsx"
-          },
-          "cssFilePath": "plasmic/hecto/PlasmicBlog.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
           "id": "skdcktnuML",
           "name": "Index",
           "type": "managed",
@@ -331,6 +318,19 @@
           "cssFilePath": "plasmic/hecto/PlasmicHectoNav.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "C5n9cmwHg6f",
+          "name": "Resources",
+          "type": "managed",
+          "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
+          "renderModuleFilePath": "plasmic/hecto/PlasmicResources.jsx",
+          "importSpec": {
+            "modulePath": "../pages/resources.jsx"
+          },
+          "cssFilePath": "plasmic/hecto/PlasmicResources.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
