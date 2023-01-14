@@ -17,8 +17,6 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts,
 } from "@plasmicapp/react-web"
-import Header from "../../Header" // plasmic-import: qDyfn4Gje2P/component
-import { CmsQueryRepeater } from "@plasmicpkgs/plasmic-cms" // plasmic-import: 8N9-WfZSaq/codeComponent
 import Button from "../../Button" // plasmic-import: 16yj8MRmRBT/component
 import "@plasmicapp/react-web/lib/plasmic.css"
 import * as projectcss from "./plasmic_hecto.module.css" // plasmic-import: jLAmXkGdPPYDvKpL9j3cJd/projectcss
@@ -96,140 +94,8 @@ function PlasmicArticle__RenderFunc(props) {
             )}
           >
             <div className={classNames(projectcss.all, sty.freeBox__hx6Db)}>
-              <div className={classNames(projectcss.all, sty.freeBox__vBjlN)}>
-                <Header
-                  data-plasmic-name={"header"}
-                  data-plasmic-override={overrides.header}
-                  className={classNames("__wab_instance", sty.header)}
-                />
-              </div>
+              <div className={classNames(projectcss.all, sty.freeBox__vBjlN)} />
             </div>
-
-            <CmsQueryRepeater
-              data-plasmic-name={"cmsDataLoader"}
-              data-plasmic-override={overrides.cmsDataLoader}
-              className={classNames("__wab_instance", sty.cmsDataLoader)}
-              desc={false}
-              emptyMessage={
-                <ph.DataCtxReader>
-                  {$ctx => (
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__hnoTs
-                      )}
-                    >
-                      {"No matching published entries found."}
-                    </div>
-                  )}
-                </ph.DataCtxReader>
-              }
-              filterField={"slug"}
-              filterValue={(() => {
-                try {
-                  return $ctx.params.slug
-                } catch (e) {
-                  if (e instanceof TypeError) {
-                    return "test"
-                  }
-                  throw e
-                }
-              })()}
-              forceEmptyState={false}
-              forceLoadingState={false}
-              limit={0}
-              loadingMessage={
-                <ph.DataCtxReader>
-                  {$ctx => (
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__aqSDm
-                      )}
-                    >
-                      {"Loading..."}
-                    </div>
-                  )}
-                </ph.DataCtxReader>
-              }
-              noAutoRepeat={false}
-              noLayout={false}
-              useDraft={false}
-            >
-              <ph.DataCtxReader>
-                {$ctx => (
-                  <div
-                    data-plasmic-name={"heroHorizontal"}
-                    data-plasmic-override={overrides.heroHorizontal}
-                    className={classNames(projectcss.all, sty.heroHorizontal)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__kjIzP
-                      )}
-                    >
-                      {(() => {
-                        try {
-                          return $ctx.plasmicCmsBlogArticlesItem.data.h1Heading
-                        } catch (e) {
-                          if (e instanceof TypeError) {
-                            return undefined
-                          }
-                          throw e
-                        }
-                      })()}
-                    </div>
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__ldEx
-                      )}
-                    >
-                      {(() => {
-                        try {
-                          return $ctx.plasmicCmsBlogArticlesItem.data.h2Subtitle
-                        } catch (e) {
-                          if (e instanceof TypeError) {
-                            return undefined
-                          }
-                          throw e
-                        }
-                      })()}
-                    </div>
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__aWaA
-                      )}
-                    >
-                      <div
-                        className={projectcss.__wab_expr_html_text}
-                        dangerouslySetInnerHTML={{
-                          __html: (() => {
-                            try {
-                              return $ctx.plasmicCmsBlogArticlesItem.data.body
-                            } catch (e) {
-                              if (e instanceof TypeError) {
-                                return undefined
-                              }
-                              throw e
-                            }
-                          })(),
-                        }}
-                      />
-                    </div>
-                  </div>
-                )}
-              </ph.DataCtxReader>
-            </CmsQueryRepeater>
 
             <div className={classNames(projectcss.all, sty.freeBox___20TbT)}>
               <div
@@ -395,9 +261,6 @@ function PlasmicArticle__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "header",
-    "cmsDataLoader",
-    "heroHorizontal",
     "columns",
     "column",
     "h2",
@@ -407,9 +270,6 @@ const PlasmicDescendants = {
     "link",
   ],
 
-  header: ["header"],
-  cmsDataLoader: ["cmsDataLoader", "heroHorizontal"],
-  heroHorizontal: ["heroHorizontal"],
   columns: ["columns", "column", "h2", "button", "svg"],
   column: ["column", "h2", "button", "svg"],
   h2: ["h2"],
@@ -453,9 +313,6 @@ export const PlasmicArticle = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    header: makeNodeComponent("header"),
-    cmsDataLoader: makeNodeComponent("cmsDataLoader"),
-    heroHorizontal: makeNodeComponent("heroHorizontal"),
     columns: makeNodeComponent("columns"),
     column: makeNodeComponent("column"),
     h2: makeNodeComponent("h2"),

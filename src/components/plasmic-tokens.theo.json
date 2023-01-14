@@ -1,6 +1,16 @@
 {
   "props": [
     {
+      "name": "BlueBackground",
+      "type": "color",
+      "value": "#F7FCFF",
+      "category": "color",
+      "meta": {
+        "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
+        "id": "v3fFDzN4r"
+      }
+    },
+    {
       "name": "BurntOrange",
       "type": "color",
       "value": "#FF4A03",

@@ -268,45 +268,6 @@
           "componentType": "page"
         },
         {
-          "id": "APao_xwWny",
-          "name": "NewPage2",
-          "type": "managed",
-          "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
-          "renderModuleFilePath": "plasmic/hecto/PlasmicNewPage2.jsx",
-          "importSpec": {
-            "modulePath": "../pages/new-page-2.jsx"
-          },
-          "cssFilePath": "plasmic/hecto/PlasmicNewPage2.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
-          "id": "8LDofM1DMQp",
-          "name": "Newsletter",
-          "type": "managed",
-          "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
-          "renderModuleFilePath": "plasmic/hecto/PlasmicNewsletter.jsx",
-          "importSpec": {
-            "modulePath": "../pages/newsletter.jsx"
-          },
-          "cssFilePath": "plasmic/hecto/PlasmicNewsletter.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
-          "id": "mqmd6Ir3zvv",
-          "name": "Newsletter2",
-          "type": "managed",
-          "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
-          "renderModuleFilePath": "plasmic/hecto/PlasmicNewsletter2.jsx",
-          "importSpec": {
-            "modulePath": "../pages/search.jsx"
-          },
-          "cssFilePath": "plasmic/hecto/PlasmicNewsletter2.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
           "id": "1Xqtr1aGys",
           "name": "HectoNav",
           "type": "managed",
@@ -334,14 +295,14 @@
         },
         {
           "id": "HLCMdt64_9V",
-          "name": "Newsletter3",
+          "name": "Search",
           "type": "managed",
           "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
-          "renderModuleFilePath": "plasmic/hecto/PlasmicNewsletter3.jsx",
+          "renderModuleFilePath": "plasmic/hecto/PlasmicSearch.jsx",
           "importSpec": {
-            "modulePath": "../pages/-2.jsx"
+            "modulePath": "../pages/search.jsx"
           },
-          "cssFilePath": "plasmic/hecto/PlasmicNewsletter3.module.css",
+          "cssFilePath": "plasmic/hecto/PlasmicSearch.module.css",
           "scheme": "blackbox",
           "componentType": "page"
         }
@@ -559,6 +520,30 @@
         }
       ],
       "jsBundleThemes": []
+    },
+    {
+      "projectId": "YUiM7yqBWAqsh8KSnrdj7",
+      "projectApiToken": "yLKpJOE8mD6HqoNCSWF3Em8ut0LBzL7qb3QPqNeOLPjQsSBSc12yhYovnSRSekzgt1xjjbugBGDjOMLGMK4w",
+      "projectName": "plasmic-query",
+      "version": "0.9.0",
+      "cssFilePath": "plasmic/plasmic_query/plasmic_plasmic_query.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "ae7V86eNoXA",
+          "name": "DataFetcher",
+          "componentImportPath": "@plasmicpkgs/plasmic-query"
+        },
+        {
+          "id": "0DrxdjD45dkx",
+          "name": "GraphqlFetcher",
+          "componentImportPath": "@plasmicpkgs/plasmic-query"
+        }
+      ]
     }
   ],
   "globalVariants": {

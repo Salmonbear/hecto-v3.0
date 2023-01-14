@@ -4,27 +4,24 @@ import * as React from "react"
 import * as ph from "@plasmicapp/host"
 import GlobalContextsProvider from "../components/plasmic/hecto/PlasmicGlobalContextsProvider"
 import { UnnamedGlobalGroupOfVariantsContext } from "../components/plasmic/hecto/PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants"
-import {
-  PlasmicNewsletter2,
-  Head,
-} from "../components/plasmic/hecto/PlasmicNewsletter2"
+import { PlasmicSearch, Head } from "../components/plasmic/hecto/PlasmicSearch"
 
 export { Head }
 
-function Newsletter2({ location, params }) {
-  // Use PlasmicNewsletter2 to render this component as it was
+function Search({ location, params }) {
+  // Use PlasmicSearch to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You
   // can also install whatever React hooks you need here to manage state or
   // fetch data.
   //
-  // Props you can pass into PlasmicNewsletter2 are:
+  // Props you can pass into PlasmicSearch are:
   // 1. Variants you want to activate,
   // 2. Contents for slots you want to fill,
   // 3. Overrides for any named node in the component to attach behavior and data,
   // 4. Props to set on the root node.
   //
-  // By default, PlasmicNewsletter2 is wrapped by your project's global
+  // By default, PlasmicSearch is wrapped by your project's global
   // variant context providers. These wrappers may be moved to
   // Gatsby "wrapRootElement" function
   // (https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr#wrapRootElement).
@@ -35,11 +32,11 @@ function Newsletter2({ location, params }) {
           params={params}
           query={Object.fromEntries(new URLSearchParams(location.search))}
         >
-          <PlasmicNewsletter2 />
+          <PlasmicSearch />
         </ph.PageParamsProvider>
       </GlobalContextsProvider>
     </UnnamedGlobalGroupOfVariantsContext.Provider>
   )
 }
 
-export default Newsletter2
+export default Search

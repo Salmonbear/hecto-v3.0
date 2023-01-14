@@ -11,6 +11,7 @@
     "@plasmicpkgs/antd": "0.0.47",
     "@plasmicpkgs/plasmic-cms": "^0.0.138",
     "@plasmicpkgs/plasmic-nav": "^0.0.62",
+    "@plasmicpkgs/plasmic-query": "^0.0.107",
     "antd": "^4.20.2",
     "gatsby": "^4.13.1",
     "gatsby-plugin-gatsby-cloud": "^4.13.0",

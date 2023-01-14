@@ -11,6 +11,8 @@
   --plasmic-token-unnamed-style-token: var(--token-OA3-5HlnW);
   --token-eeq5mwYJh: 10px;
   --plasmic-token-menu: var(--token-eeq5mwYJh);
+  --token-v3fFDzN4r: #f7fcff;
+  --plasmic-token-blue-background: var(--token-v3fFDzN4r);
 }
 
 .plasmic_default_styles,
