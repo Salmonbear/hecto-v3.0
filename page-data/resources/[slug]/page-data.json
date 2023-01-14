@@ -1,0 +1,6 @@
+{
+    "componentChunkName": "component---src-pages-resources-[slug]-jsx",
+    "path": "/resources/[slug]/",
+    "result": {"pageContext":{}},
+    "staticQueryHashes": [],
+    "matchPath": "/resources/:slug"}
