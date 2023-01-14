@@ -19,7 +19,6 @@ import {
   ensureGlobalVariants,
 } from "@plasmicapp/react-web"
 import HectoNav from "../../HectoNav" // plasmic-import: 1Xqtr1aGys/component
-import { CmsQueryRepeater } from "@plasmicpkgs/plasmic-cms" // plasmic-import: 8N9-WfZSaq/codeComponent
 import Button from "../../Button" // plasmic-import: 16yj8MRmRBT/component
 import { useScreenVariants as useScreenVariantskILw5UiAaS1UF } from "./PlasmicGlobalVariant__Screen" // plasmic-import: kILw5uiAaS1uF/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css"
@@ -274,98 +273,7 @@ function PlasmicResources__RenderFunc(props) {
                   data-plasmic-name={"blogColumn"}
                   data-plasmic-override={overrides.blogColumn}
                   className={classNames(projectcss.all, sty.blogColumn)}
-                >
-                  <CmsQueryRepeater
-                    data-plasmic-name={"resourcesBlogCms"}
-                    data-plasmic-override={overrides.resourcesBlogCms}
-                    className={classNames(
-                      "__wab_instance",
-                      sty.resourcesBlogCms
-                    )}
-                    desc={false}
-                    emptyMessage={
-                      <ph.DataCtxReader>
-                        {$ctx => (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___3YyKn
-                            )}
-                          >
-                            {"No matching published entries found."}
-                          </div>
-                        )}
-                      </ph.DataCtxReader>
-                    }
-                    filterField={"h1Heading"}
-                    forceEmptyState={false}
-                    forceLoadingState={false}
-                    limit={0}
-                    loadingMessage={
-                      <ph.DataCtxReader>
-                        {$ctx => (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__fEne
-                            )}
-                          >
-                            {"Loading..."}
-                          </div>
-                        )}
-                      </ph.DataCtxReader>
-                    }
-                    noAutoRepeat={false}
-                    noLayout={false}
-                    useDraft={false}
-                  >
-                    <ph.DataCtxReader>
-                      {$ctx => (
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__tUoe1
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__iDw87
-                            )}
-                            link={(() => {
-                              try {
-                                return (
-                                  "https://hecto.io/resources/" +
-                                  $ctx.plasmicCmsBlogArticlesItem.data.slug
-                                )
-                              } catch (e) {
-                                if (e instanceof TypeError) {
-                                  return undefined
-                                }
-                                throw e
-                              }
-                            })()}
-                          >
-                            {(() => {
-                              try {
-                                return $ctx.plasmicCmsBlogArticlesItem.data
-                                  .h1Heading
-                              } catch (e) {
-                                if (e instanceof TypeError) {
-                                  return "Enter some text"
-                                }
-                                throw e
-                              }
-                            })()}
-                          </div>
-                        </div>
-                      )}
-                    </ph.DataCtxReader>
-                  </CmsQueryRepeater>
-                </div>
+                />
               </section>
             ) : null}
             {true ? (
@@ -593,7 +501,6 @@ const PlasmicDescendants = {
     "heroHorizontal",
     "features",
     "blogColumn",
-    "resourcesBlogCms",
     "outer",
     "container",
     "svg",
@@ -602,9 +509,8 @@ const PlasmicDescendants = {
 
   hectoNav: ["hectoNav"],
   heroHorizontal: ["heroHorizontal"],
-  features: ["features", "blogColumn", "resourcesBlogCms"],
-  blogColumn: ["blogColumn", "resourcesBlogCms"],
-  resourcesBlogCms: ["resourcesBlogCms"],
+  features: ["features", "blogColumn"],
+  blogColumn: ["blogColumn"],
   outer: ["outer", "container"],
   container: ["container"],
   svg: ["svg"],
@@ -649,7 +555,6 @@ export const PlasmicResources = Object.assign(
     heroHorizontal: makeNodeComponent("heroHorizontal"),
     features: makeNodeComponent("features"),
     blogColumn: makeNodeComponent("blogColumn"),
-    resourcesBlogCms: makeNodeComponent("resourcesBlogCms"),
     outer: makeNodeComponent("outer"),
     container: makeNodeComponent("container"),
     svg: makeNodeComponent("svg"),
