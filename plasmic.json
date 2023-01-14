@@ -331,6 +331,19 @@
           "cssFilePath": "plasmic/hecto/PlasmicResources.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "HLCMdt64_9V",
+          "name": "Newsletter3",
+          "type": "managed",
+          "projectId": "jLAmXkGdPPYDvKpL9j3cJd",
+          "renderModuleFilePath": "plasmic/hecto/PlasmicNewsletter3.jsx",
+          "importSpec": {
+            "modulePath": "../pages/-2.jsx"
+          },
+          "cssFilePath": "plasmic/hecto/PlasmicNewsletter3.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
@@ -568,6 +581,6 @@
   "gatsbyConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.192",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.192/dist/plasmic.schema.json"
+  "cliVersion": "0.1.194",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.194/dist/plasmic.schema.json"
 }

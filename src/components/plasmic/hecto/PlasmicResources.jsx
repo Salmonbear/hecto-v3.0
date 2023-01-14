@@ -548,15 +548,19 @@ function PlasmicResources__RenderFunc(props) {
                       {"Terms and Conditions"}
                     </div>
 
-                    <div
+                    <p.PlasmicLink
                       className={classNames(
                         projectcss.all,
+                        projectcss.a,
                         projectcss.__wab_text,
-                        sty.text__kvTqd
+                        sty.link__kvTqd
                       )}
+                      component={Link}
+                      href={"https://hecto.io/contact"}
+                      platform={"gatsby"}
                     >
                       {"Contact Us"}
-                    </div>
+                    </p.PlasmicLink>
 
                     <div
                       className={classNames(
